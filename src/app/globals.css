@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0A0A2A;
+  --foreground: #F5DEB3;
+
+  /* AI Bible Gospels Brand Palette */
+  --brand-navy: #0A0A2A;
+  --brand-black: #0A0A0A;
+  --brand-gold: #E8C46B;
+  --brand-amber: #D4A04A;
+  --brand-bronze: #8B5E3C;
+  --brand-softgold: #F5DEB3;
+  --brand-brown: #3B2314;
+  --brand-cloud: #F0E6D2;
+  --brand-border: #1a1a4a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-brand-navy: #0A0A2A;
+  --color-brand-black: #0A0A0A;
+  --color-brand-gold: #E8C46B;
+  --color-brand-amber: #D4A04A;
+  --color-brand-bronze: #8B5E3C;
+  --color-brand-softgold: #F5DEB3;
+  --color-brand-brown: #3B2314;
+  --color-brand-cloud: #F0E6D2;
+  --color-brand-border: #1a1a4a;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
