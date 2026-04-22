@@ -248,6 +248,22 @@ export default function Home() {
               >
                 YouTube
               </a>
+              <a
+                href="https://12tribesofisrael.github.io/aibiblegospels-legal/privacy.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-softgold hover:text-brand-gold transition"
+              >
+                Privacy
+              </a>
+              <a
+                href="https://12tribesofisrael.github.io/aibiblegospels-legal/terms.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-softgold hover:text-brand-gold transition"
+              >
+                Terms
+              </a>
             </div>
           </div>
         </div>
