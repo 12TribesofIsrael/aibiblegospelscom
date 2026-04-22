@@ -208,13 +208,13 @@ export default function Home() {
             pitch, just a conversation.
           </p>
           <a
-            href="mailto:technologygurusllc@gmail.com?subject=Faith-tech%20inquiry"
+            href="mailto:aibiblegospels444@gmail.com?subject=Faith-tech%20inquiry"
             className="inline-block mt-8 px-6 py-3 rounded-full bg-brand-gold text-brand-black font-semibold hover:bg-brand-amber transition"
           >
             Send a note
           </a>
           <p className="text-brand-bronze text-xs mt-4">
-            technologygurusllc@gmail.com
+            aibiblegospels444@gmail.com
           </p>
         </div>
       </section>

@@ -23,7 +23,7 @@ Single-page parent brand site with 6 sections:
 2. Flagship — Faith Walk Live case study
 3. What we build — trackers, stream automation, ministry sites, content pipelines
 4. YouTube channel feature
-5. Work with us — email CTA (`technologygurusllc@gmail.com`)
+5. Work with us — email CTA (`aibiblegospels444@gmail.com`)
 6. Footer — Colossians 3:23 + brand credits
 
 ## Why it exists
