@@ -2,7 +2,7 @@
 
 **Current Version: v0.1.0**
 **Status:** Scaffolded Apr 21, 2026. Not yet deployed.
-**Owner:** Thomas (Technology Gurus LLC)
+**Owner:** Thomas (AI Bible Gospels)
 
 ## Project overview
 

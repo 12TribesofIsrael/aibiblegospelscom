@@ -231,7 +231,7 @@ export default function Home() {
           </blockquote>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-4 border-t border-brand-border">
             <p className="text-brand-bronze">
-              AI Bible Gospels · Technology Gurus LLC
+              AI Bible Gospels
             </p>
             <div className="flex items-center gap-4 text-xs">
               <Link

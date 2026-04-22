@@ -1,6 +1,6 @@
 # AI Bible Gospels
 
-> Faith-driven technology ministry using software and AI in service of the gospel. Builds tools for ministers, Christian streamers, and missions organizations. Owner: Thomas (Technology Gurus LLC). YouTube channel: @AIBIBLEGOSPELS. Flagship project: Faith Walk Live.
+> Faith-driven technology ministry using software and AI in service of the gospel. Builds tools for ministers, Christian streamers, and missions organizations. Founded by Thomas. YouTube channel: @AIBIBLEGOSPELS. Flagship project: Faith Walk Live.
 
 AI Bible Gospels exists to serve the calling, not monetize it. Every tool shipped is real, live, and in use. No AI hype, no faith-adjacent marketing language — just software that helps believers do the work.
 
@@ -18,9 +18,8 @@ AI Bible Gospels exists to serve the calling, not monetize it. Every tool shippe
 
 ## Entities
 
-- AI Bible Gospels: Faith-tech ministry and consulting brand. Owner: Thomas of Technology Gurus LLC.
+- AI Bible Gospels: Faith-tech ministry and consulting brand. Founded by Thomas.
 - Faith Walk Live: Flagship deliverable. A supporter-built companion site for Minister Zay's Faith Walk.
-- Technology Gurus LLC: The legal entity behind AI Bible Gospels.
 
 ## What we build
 

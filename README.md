@@ -2,7 +2,7 @@
 
 **Current Version: v0.1.0**
 **Domain:** [aibiblegospels.com](https://aibiblegospels.com) (not yet live — scaffolded Apr 21, 2026)
-**Owner:** Thomas (Technology Gurus LLC)
+**Owner:** Thomas (AI Bible Gospels)
 
 Parent-brand site for AI Bible Gospels. Positioning, case studies, services, and contact. Flagship deliverable is [Faith Walk Live](https://faithwalklive.com) in the sibling repo.
 
