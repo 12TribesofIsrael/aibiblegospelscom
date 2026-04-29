@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s · AI Bible Gospels",
   },
   description:
-    "AI Bible Gospels builds faith-tech for ministers, Christian streamers, and missions organizations. Live trackers, stream automation, ministry websites, and prayer tools. Flagship: Faith Walk Live.",
+    "AI Bible Gospels builds faith-tech for ministers, Christian streamers, and missions organizations. Live trackers, stream automation, ministry websites, and prayer tools. Flagships: Faith Walk Live and Anointed (anointed.app).",
   keywords: [
     "AI Bible Gospels",
     "faith tech",
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     siteName: "AI Bible Gospels",
     title: "AI Bible Gospels — Faith-Tech for Ministers, Streamers, and Missions",
     description:
-      "Faith-tech built to serve the gospel. Live trackers, stream automation, ministry websites, prayer tools. Flagship: Faith Walk Live.",
+      "Faith-tech built to serve the gospel. Live trackers, stream automation, ministry websites, prayer tools. Flagships: Faith Walk Live and Anointed.",
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Bible Gospels — Faith-Tech for the Gospel",
     description:
-      "Faith-tech for ministers, Christian streamers, and missions. Flagship: Faith Walk Live.",
+      "Faith-tech for ministers, Christian streamers, and missions. Flagships: Faith Walk Live and Anointed.",
     creator: "@AIBIBLEGOSPELS",
   },
   robots: {
@@ -68,6 +68,7 @@ const jsonLd = {
       sameAs: [
         "https://www.youtube.com/@AIBIBLEGOSPELS",
         "https://faithwalklive.com",
+        "https://anointed.app",
       ],
       founder: {
         "@type": "Person",
@@ -80,7 +81,7 @@ const jsonLd = {
       name: "AI Bible Gospels",
       url: "https://aibiblegospels.com",
       description:
-        "Faith-tech for ministers, Christian streamers, and missions. Flagship: Faith Walk Live.",
+        "Faith-tech for ministers, Christian streamers, and missions. Flagships: Faith Walk Live and Anointed.",
       inLanguage: "en-US",
       publisher: { "@id": "https://aibiblegospels.com/#organization" },
     },

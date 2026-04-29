@@ -19,10 +19,10 @@ export default function Home() {
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#flagship"
+            href="#flagships"
             className="inline-block px-6 py-3 rounded-full bg-brand-gold text-brand-black font-semibold hover:bg-brand-amber transition"
           >
-            See the flagship
+            See the flagships
           </a>
           <a
             href="#work-with-us"
@@ -35,7 +35,7 @@ export default function Home() {
 
       {/* ── FLAGSHIP CASE STUDY ── */}
       <section
-        id="flagship"
+        id="flagships"
         className="border-t border-brand-border bg-brand-black/40"
       >
         <div className="max-w-4xl mx-auto px-4 py-20">
@@ -97,6 +97,75 @@ export default function Home() {
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-brand-border text-brand-softgold hover:border-brand-gold hover:text-brand-gold transition"
             >
               Watch the stream
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FLAGSHIP — ANOINTED ── */}
+      <section
+        id="anointed"
+        className="border-t border-brand-border bg-brand-black/40"
+      >
+        <div className="max-w-4xl mx-auto px-4 py-20">
+          <p className="text-xs uppercase tracking-[0.3em] text-brand-amber mb-4">
+            Flagship — currently live
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-brand-cloud">
+            Anointed
+          </h2>
+          <p className="text-brand-softgold mt-4 text-lg leading-relaxed">
+            A video production platform for ministers and creators. Paste in
+            text — scripture or your own script — and get back a narrated,
+            cinematic video, ready to post.
+          </p>
+
+          <ul className="mt-8 space-y-3 text-brand-softgold">
+            <li className="flex gap-3">
+              <span className="text-brand-gold">•</span>
+              <span>
+                Paste KJV scripture, get back a fully produced cinematic video
+                — narrated, scored, subtitled
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-brand-gold">•</span>
+              <span>
+                Custom Script mode for sermons, channel trailers, mission
+                updates, or anything written
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-brand-gold">•</span>
+              <span>
+                Review every scene before rendering — fix what&apos;s off, keep
+                what works
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-brand-gold">•</span>
+              <span>
+                Three aspect ratios in one go: YouTube, feed, and Shorts/Reels
+              </span>
+            </li>
+          </ul>
+
+          <div className="mt-10 flex flex-col sm:flex-row gap-4">
+            <a
+              href="https://anointed.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-gold text-brand-black font-medium hover:bg-brand-amber transition"
+            >
+              Visit anointed.app →
+            </a>
+            <a
+              href="https://www.youtube.com/@AIBIBLEGOSPELS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-brand-border text-brand-softgold hover:border-brand-gold hover:text-brand-gold transition"
+            >
+              See videos made with it
             </a>
           </div>
         </div>
@@ -240,6 +309,14 @@ export default function Home() {
               >
                 Faith Walk Live
               </Link>
+              <a
+                href="https://anointed.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-softgold hover:text-brand-gold transition"
+              >
+                Anointed
+              </a>
               <a
                 href="https://www.youtube.com/@AIBIBLEGOSPELS"
                 target="_blank"
