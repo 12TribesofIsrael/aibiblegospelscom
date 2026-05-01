@@ -259,6 +259,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── FOR CREATORS ── */}
+      <section
+        id="for-creators"
+        className="border-t border-brand-border bg-brand-black/40"
+      >
+        <div className="max-w-3xl mx-auto px-4 py-20 text-center">
+          <p className="text-xs uppercase tracking-[0.3em] text-brand-amber mb-4">
+            For creators
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-brand-cloud">
+            Schedule faith content from one dashboard.
+          </h2>
+          <p className="text-brand-softgold mt-4 max-w-2xl mx-auto leading-relaxed">
+            Ministers, Christian streamers, and missions teams can connect a
+            TikTok account to AI Bible Gospels and schedule content from one
+            place. Currently in invite-only beta.
+          </p>
+          <Link
+            href="/connect/tiktok"
+            className="inline-flex items-center gap-3 mt-8 px-6 py-3 rounded-full bg-brand-gold text-brand-black font-semibold hover:bg-brand-amber transition"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-5 h-5"
+              aria-label="TikTok"
+            >
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z" />
+            </svg>
+            Connect your TikTok
+          </Link>
+        </div>
+      </section>
+
       {/* ── WORK WITH US ── */}
       <section
         id="work-with-us"
@@ -303,6 +337,12 @@ export default function Home() {
               AI Bible Gospels
             </p>
             <div className="flex items-center gap-4 text-xs">
+              <Link
+                href="/connect/tiktok"
+                className="text-brand-softgold hover:text-brand-gold transition"
+              >
+                Connect
+              </Link>
               <Link
                 href="https://faithwalklive.com"
                 className="text-brand-softgold hover:text-brand-gold transition"
