@@ -33,6 +33,97 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── WELCOME / TIKTOK FUNNEL ── */}
+      <section
+        id="welcome"
+        className="border-t border-brand-border bg-brand-black/40"
+      >
+        <div className="max-w-4xl mx-auto px-4 py-20 text-center">
+          <p className="text-xs uppercase tracking-[0.3em] text-brand-amber mb-4">
+            From TikTok? Start here.
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-brand-cloud">
+            Welcome, remnant.
+          </h2>
+          <p className="text-brand-softgold mt-4 max-w-2xl mx-auto leading-relaxed">
+            You found us through a 60-second clip. What we&apos;re building
+            doesn&apos;t fit in 60 seconds. Three places to plug in.
+          </p>
+
+          <div className="mt-12 grid sm:grid-cols-3 gap-4 text-left">
+            <a
+              href="https://www.youtube.com/@AIBIBLEGOSPELS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl border border-brand-border bg-brand-black/30 p-6 hover:border-brand-gold transition"
+            >
+              <p className="text-xs uppercase tracking-[0.2em] text-brand-amber">
+                YouTube
+              </p>
+              <h3 className="text-lg font-semibold text-brand-cloud mt-2">
+                The full prophecy series
+              </h3>
+              <p className="text-brand-softgold mt-2 text-sm leading-relaxed">
+                80+ episodes decoding the 12 Tribes, Deuteronomy 28, and the
+                identity hidden in plain sight.
+              </p>
+              <p className="text-brand-gold text-sm mt-4">
+                Watch on YouTube →
+              </p>
+            </a>
+
+            <a
+              href="https://faithwalklive.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl border border-brand-border bg-brand-black/30 p-6 hover:border-brand-gold transition"
+            >
+              <p className="text-xs uppercase tracking-[0.2em] text-brand-amber">
+                Live tracker
+              </p>
+              <h3 className="text-lg font-semibold text-brand-cloud mt-2">
+                Faith Walk Live
+              </h3>
+              <p className="text-brand-softgold mt-2 text-sm leading-relaxed">
+                A real minister walking 3,000 miles for the gospel. Live map,
+                daily clips, prayer wall.
+              </p>
+              <p className="text-brand-gold text-sm mt-4">
+                Open Faith Walk Live →
+              </p>
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@aibiblegospels_"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl border border-brand-border bg-brand-black/30 p-6 hover:border-brand-gold transition"
+            >
+              <p className="text-xs uppercase tracking-[0.2em] text-brand-amber">
+                Daily drops
+              </p>
+              <h3 className="text-lg font-semibold text-brand-cloud mt-2">
+                Back to TikTok
+              </h3>
+              <p className="text-brand-softgold mt-2 text-sm leading-relaxed">
+                New 60-second prophecy decodes posted regularly. Pinned posts
+                at the top of the grid.
+              </p>
+              <p className="text-brand-gold text-sm mt-4">
+                Latest on TikTok →
+              </p>
+            </a>
+          </div>
+
+          <blockquote className="border-l-2 border-brand-gold/60 pl-4 italic text-brand-softgold text-sm mt-12 max-w-xl mx-auto text-left">
+            &ldquo;Then they that feared the LORD spake often one to another.&rdquo;
+            <span className="block not-italic text-xs text-brand-bronze mt-1">
+              Malachi 3:16
+            </span>
+          </blockquote>
+        </div>
+      </section>
+
       {/* ── FLAGSHIP CASE STUDY ── */}
       <section
         id="flagships"
