@@ -1,8 +1,23 @@
 # AI Bible Gospels — Parent Brand Site
 
-**Current Version: v0.1.0**
-**Status:** Scaffolded Apr 21, 2026. Not yet deployed.
+**Current Version: v0.1.0** (needs a bump — see "Shipped since v0.1.0" below)
+**Status:** **LIVE in production at [aibiblegospels.com](https://aibiblegospels.com).** Deployed on Vercel since ~Apr 22, 2026 (Privacy/Terms commits on that date already targeted "the canonical site"). Currently in TikTok app review.
 **Owner:** Thomas (AI Bible Gospels)
+
+## Shipped since v0.1.0 (changelog not yet rolled up)
+
+In rough order, all live on aibiblegospels.com:
+
+| Date | Commit | What |
+|---|---|---|
+| 2026-05-02 | `c3c04c4` | TikTok funnel section on homepage — "From TikTok? Start here. Welcome, remnant." → 3 plug-in CTAs (YouTube prophecy series, Faith Walk Live, daily TikTok drops) |
+| 2026-05-01 | `9f454a3` | TikTok OAuth login flow at `/connect/tiktok` — enables the multi-account TikTok scheduling pitch in the "For creators" section |
+| 2026-04-29 | `9af3fcb` | **Anointed** added as second flagship alongside Faith Walk Live — paste KJV scripture or custom script → narrated, cinematic, multi-aspect video. Lives at [anointed.app](https://anointed.app) |
+| 2026-04-29 | `85d3f13` | `/privacy` + `/terms` pages moved onto canonical site for TikTok app review |
+| 2026-04-22 | `0c9db40` `2f68ad1` `df9a44f` | Privacy/Terms footer links, contact email → `aibiblegospels444@gmail.com`, decommissioned LLC references scrubbed (brand is AI Bible Gospels only) |
+| 2026-04-21 | `b34847b` | v0.1.0 — initial scaffold |
+
+Suggested version bump: **v0.2.0** (multiple new features on existing system per the consulting repo's semver convention). Roll up before next push.
 
 ## Project overview
 
@@ -17,14 +32,19 @@ Opened together via `hblfaithwalk.code-workspace` in the parent directory.
 
 ## What this site is
 
-Single-page parent brand site with 6 sections:
+Parent brand site, single-scroll homepage with these sections (verified live 2026-05-11):
 
 1. Hero — "Faith-tech for ministers, streamers, and missions"
-2. Flagship — Faith Walk Live case study
-3. What we build — trackers, stream automation, ministry sites, content pipelines
-4. YouTube channel feature
-5. Work with us — email CTA (`aibiblegospels444@gmail.com`)
-6. Footer — Colossians 3:23 + brand credits
+2. **TikTok funnel** — "From TikTok? Start here. Welcome, remnant." → YouTube / Faith Walk Live / TikTok daily-drops triage
+3. **Flagship #1 — Faith Walk Live** (currently live) — companion platform for Minister Zay's walk
+4. **Flagship #2 — Anointed** (currently live, lives at [anointed.app](https://anointed.app)) — paste-to-cinematic-video for ministers/creators
+5. What we build — trackers, stream automation, ministry sites, content pipelines
+6. YouTube channel feature
+7. **For creators** — TikTok multi-account scheduling pitch (powered by `/connect/tiktok` OAuth)
+8. Work with us — email CTA (`aibiblegospels444@gmail.com`)
+9. Footer — Colossians 3:23 + brand credits + Privacy + Terms
+
+Routes beyond `/`: `/privacy`, `/terms`, `/connect/tiktok` (OAuth landing).
 
 ## Why it exists
 
@@ -76,9 +96,11 @@ Inherits faithwalklivecom's positioning rules:
 
 ## Phase 2 (when inbound demand materializes)
 
-- [ ] Vercel deploy + domain connect
+- [x] Vercel deploy + domain connect (done ~Apr 22, 2026)
+- [x] Second flagship live (Anointed at anointed.app, surfaced on homepage)
 - [ ] Update faithwalklivecom Organization `sameAs` to include aibiblegospels.com (both directions)
-- [ ] Case study template + second case study (once second project ships)
+- [ ] TikTok app review approval — `/connect/tiktok` flow currently pending review
+- [ ] Case study template + Faith Walk Live + Anointed write-ups (once both have results to point at)
 - [ ] Dedicated `/services` page if pitch-vs-inquiry split ever justifies it
 - [ ] Blog section for long-tail AEO content (e.g. "How to build a tracker for your missions trip")
 
