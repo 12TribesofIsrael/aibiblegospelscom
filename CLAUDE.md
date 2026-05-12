@@ -1,23 +1,21 @@
 # AI Bible Gospels — Parent Brand Site
 
-**Current Version: v0.1.0** (needs a bump — see "Shipped since v0.1.0" below)
-**Status:** **LIVE in production at [aibiblegospels.com](https://aibiblegospels.com).** Deployed on Vercel since ~Apr 22, 2026 (Privacy/Terms commits on that date already targeted "the canonical site"). Currently in TikTok app review.
+**Current Version: v0.2.0**
+**Status:** **LIVE in production at [aibiblegospels.com](https://aibiblegospels.com).** Deployed on Vercel since ~Apr 22, 2026. Currently in TikTok app review.
 **Owner:** Thomas (AI Bible Gospels)
 
-## Shipped since v0.1.0 (changelog not yet rolled up)
+## What shipped in v0.2.0 (2026-05-12)
 
-In rough order, all live on aibiblegospels.com:
+- **Deuteronomy 28 cheatsheet capture flow** — purpose: convert viral TikTok traffic into owned email list before bio link unlocks at 1k followers.
+  - Form lives in the `/welcome` (TikTok funnel) section of the homepage
+  - `POST /api/subscribe` → adds contact to Resend Audience + emails the cheatsheet PDF
+  - Cheatsheet at `/deut28-cheatsheet.pdf` (4-page, brand-styled, KJV-only, 12 curses → modern conditions)
+- **Anointed surfaced as flagship #2** (commit `9af3fcb`, 2026-04-29)
+- **TikTok funnel "Welcome, remnant" section** (commit `c3c04c4`, 2026-05-02)
+- **TikTok OAuth login flow** at `/connect/tiktok` (commit `9f454a3`, 2026-05-01)
+- **Privacy / Terms onto canonical site** for TikTok app review (commit `85d3f13`, 2026-04-29)
 
-| Date | Commit | What |
-|---|---|---|
-| 2026-05-02 | `c3c04c4` | TikTok funnel section on homepage — "From TikTok? Start here. Welcome, remnant." → 3 plug-in CTAs (YouTube prophecy series, Faith Walk Live, daily TikTok drops) |
-| 2026-05-01 | `9f454a3` | TikTok OAuth login flow at `/connect/tiktok` — enables the multi-account TikTok scheduling pitch in the "For creators" section |
-| 2026-04-29 | `9af3fcb` | **Anointed** added as second flagship alongside Faith Walk Live — paste KJV scripture or custom script → narrated, cinematic, multi-aspect video. Lives at [anointed.app](https://anointed.app) |
-| 2026-04-29 | `85d3f13` | `/privacy` + `/terms` pages moved onto canonical site for TikTok app review |
-| 2026-04-22 | `0c9db40` `2f68ad1` `df9a44f` | Privacy/Terms footer links, contact email → `aibiblegospels444@gmail.com`, decommissioned LLC references scrubbed (brand is AI Bible Gospels only) |
-| 2026-04-21 | `b34847b` | v0.1.0 — initial scaffold |
-
-Suggested version bump: **v0.2.0** (multiple new features on existing system per the consulting repo's semver convention). Roll up before next push.
+See `CHANGELOG.md` for full history.
 
 ## Project overview
 
@@ -72,11 +70,20 @@ npm start            # Production server
 | Path | Purpose |
 |------|---------|
 | `src/app/layout.tsx` | Root layout + metadata + JSON-LD `@graph` (Organization + WebSite) |
-| `src/app/page.tsx` | Homepage — all 6 sections inline, no component split yet |
+| `src/app/page.tsx` | Homepage — all 9 sections inline, imports `<SubscribeForm/>` for capture |
 | `src/app/globals.css` | Tailwind + AI Bible Gospels brand palette |
 | `src/app/robots.ts` | AI-bot allowlist (matches faithwalklivecom pattern) |
 | `src/app/sitemap.ts` | Auto-generated sitemap |
+| `src/app/api/subscribe/route.ts` | POST → Resend Audience + cheatsheet email (v0.2.0) |
+| `src/app/api/tiktok/start/route.ts` | TikTok OAuth init |
+| `src/app/api/tiktok/callback/route.ts` | TikTok OAuth callback |
+| `src/components/SubscribeForm.tsx` | Client-side capture form (v0.2.0) |
+| `public/deut28-cheatsheet.pdf` | The lead-magnet PDF (rendered from `scripts/cheatsheet.html`) |
 | `public/llms.txt` | llmstxt.org-spec index, entity definitions, policy |
+| `scripts/cheatsheet.html` | Source HTML for the cheatsheet PDF (edit + re-render) |
+| `scripts/generate-cheatsheet-pdf.ps1` | Headless-Chrome renderer → `public/deut28-cheatsheet.pdf` |
+| `docs/deut28-cheatsheet-draft.md` | Markdown draft used to scope the PDF content |
+| `.env.example` | Required env vars: `RESEND_API_KEY`, `RESEND_AUDIENCE_ID`, `TIKTOK_CLIENT_KEY` |
 
 ## Voice / writing rules
 
@@ -98,8 +105,10 @@ Inherits faithwalklivecom's positioning rules:
 
 - [x] Vercel deploy + domain connect (done ~Apr 22, 2026)
 - [x] Second flagship live (Anointed at anointed.app, surfaced on homepage)
+- [x] Email-capture funnel live (Deut 28 cheatsheet, Resend Audience, v0.2.0)
 - [ ] Update faithwalklivecom Organization `sameAs` to include aibiblegospels.com (both directions)
 - [ ] TikTok app review approval — `/connect/tiktok` flow currently pending review
+- [ ] Broadcast emails to the Deut 28 audience (new prophecy drops, Faith Walk milestones)
 - [ ] Case study template + Faith Walk Live + Anointed write-ups (once both have results to point at)
 - [ ] Dedicated `/services` page if pitch-vs-inquiry split ever justifies it
 - [ ] Blog section for long-tail AEO content (e.g. "How to build a tracker for your missions trip")

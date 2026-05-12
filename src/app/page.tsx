@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SubscribeForm from "@/components/SubscribeForm";
 
 export default function Home() {
   return (
@@ -114,6 +115,8 @@ export default function Home() {
               </p>
             </a>
           </div>
+
+          <SubscribeForm source="welcome" />
 
           <blockquote className="border-l-2 border-brand-gold/60 pl-4 italic text-brand-softgold text-sm mt-12 max-w-xl mx-auto text-left">
             &ldquo;Then they that feared the LORD spake often one to another.&rdquo;

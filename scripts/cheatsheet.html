@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Deuteronomy 28 — The Cheatsheet</title>
+<style>
+  @page {
+    size: letter;
+    margin: 0;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0A0A2A;
+    color: #F5DEB3;
+    font-family: Georgia, 'Times New Roman', serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 8.5in;
+    height: 11in;
+    padding: 0.75in 0.85in;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page:last-child { page-break-after: auto; }
+
+  /* ── Cover ─────────────────────────────────────────────── */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+  .cover .eyebrow {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.35em;
+    font-size: 11pt;
+    text-transform: uppercase;
+    color: #D4A04A;
+    margin-bottom: 1.5in;
+  }
+  .cover .title {
+    font-size: 60pt;
+    color: #E8C46B;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.15in 0;
+  }
+  .cover .subtitle {
+    font-size: 28pt;
+    color: #F0E6D2;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0 0 1.2in 0;
+  }
+  .cover .deck {
+    font-size: 14pt;
+    color: #F5DEB3;
+    line-height: 1.5;
+    max-width: 5in;
+  }
+  .cover .deck .accent { color: #E8C46B; }
+  .cover .footline {
+    position: absolute;
+    bottom: 0.75in;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #8B5E3C;
+  }
+  .cover .rule {
+    width: 1.5in;
+    height: 1px;
+    background: #E8C46B;
+    margin: 0.4in auto;
+    opacity: 0.6;
+  }
+
+  /* ── Inside pages ──────────────────────────────────────── */
+  .eyebrow-sm {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.3em;
+    font-size: 9pt;
+    text-transform: uppercase;
+    color: #D4A04A;
+    margin-bottom: 0.15in;
+  }
+  h1.section {
+    font-size: 32pt;
+    color: #F0E6D2;
+    margin: 0 0 0.3in 0;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+  h1.section .gold { color: #E8C46B; }
+  p.body {
+    font-size: 12pt;
+    line-height: 1.65;
+    color: #F5DEB3;
+    margin: 0 0 0.18in 0;
+  }
+  p.body .em {
+    color: #F0E6D2;
+    font-style: italic;
+  }
+
+  /* ── Table ─────────────────────────────────────────────── */
+  table.map {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.2in;
+    font-size: 9.5pt;
+  }
+  table.map th {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 7.5pt;
+    color: #D4A04A;
+    padding: 0.05in 0.08in 0.1in;
+    border-bottom: 1px solid #1a1a4a;
+    font-weight: 600;
+  }
+  table.map td {
+    padding: 0.13in 0.08in;
+    vertical-align: top;
+    border-bottom: 1px solid #1a1a4a;
+    color: #F5DEB3;
+    line-height: 1.45;
+  }
+  table.map td.num {
+    color: #8B5E3C;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    width: 0.3in;
+    font-weight: 600;
+  }
+  table.map td.verse {
+    color: #E8C46B;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    width: 0.85in;
+    font-size: 9pt;
+  }
+  table.map td.kjv {
+    font-style: italic;
+    color: #F0E6D2;
+  }
+  table.map td.now {
+    color: #F5DEB3;
+    width: 1.85in;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+  }
+
+  /* ── CTAs ──────────────────────────────────────────────── */
+  .cta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.3in 0 0;
+  }
+  .cta-list li {
+    padding: 0.18in 0;
+    border-bottom: 1px solid #1a1a4a;
+  }
+  .cta-list li:last-child { border-bottom: none; }
+  .cta-list .label {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 8pt;
+    color: #D4A04A;
+    margin-bottom: 0.05in;
+    display: block;
+  }
+  .cta-list .head {
+    font-size: 14pt;
+    color: #F0E6D2;
+    margin: 0 0 0.05in 0;
+  }
+  .cta-list .head .gold { color: #E8C46B; }
+  .cta-list .blurb {
+    font-size: 10.5pt;
+    color: #F5DEB3;
+    line-height: 1.45;
+    margin: 0;
+  }
+  .cta-list .url {
+    font-family: 'Courier New', monospace;
+    color: #E8C46B;
+    font-size: 10pt;
+  }
+
+  /* ── Quote / footer ────────────────────────────────────── */
+  .scripture-quote {
+    margin-top: 0.4in;
+    padding-left: 0.2in;
+    border-left: 2px solid rgba(232, 196, 107, 0.6);
+    color: #F5DEB3;
+    font-size: 11pt;
+    line-height: 1.55;
+    font-style: italic;
+    max-width: 5.5in;
+  }
+  .scripture-quote .ref {
+    display: block;
+    margin-top: 0.08in;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 8pt;
+    color: #8B5E3C;
+  }
+
+  .pagefoot {
+    position: absolute;
+    left: 0.85in;
+    right: 0.85in;
+    bottom: 0.5in;
+    border-top: 1px solid #1a1a4a;
+    padding-top: 0.15in;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8B5E3C;
+    display: flex;
+    justify-content: space-between;
+  }
+  .pagefoot .right { color: #D4A04A; }
+</style>
+</head>
+<body>
+
+  <!-- ── Page 1 — Cover ───────────────────────────────────── -->
+  <section class="page cover">
+    <p class="eyebrow">AI Bible Gospels</p>
+
+    <h1 class="title">DEUTERONOMY<br/>28</h1>
+    <p class="subtitle">The Cheatsheet</p>
+
+    <div class="rule"></div>
+
+    <p class="deck">
+      <span class="accent">12 curses.</span> One people.<br/>
+      Hand-decoded from the King James.
+    </p>
+
+    <p class="footline">For the remnant · aibiblegospels.com</p>
+  </section>
+
+  <!-- ── Page 2 — Why this matters ────────────────────────── -->
+  <section class="page">
+    <p class="eyebrow-sm">Open the book</p>
+    <h1 class="section">Why this <span class="gold">matters.</span></h1>
+
+    <p class="body">
+      Moses stood before the children of Israel and read them their future.
+      Blessings if they kept covenant. Curses if they didn't. The blessings
+      list runs 14 verses. The curses run 54.
+    </p>
+
+    <p class="body">
+      The book is closed for most people. Open it, and the conditions read
+      like the morning news.
+    </p>
+
+    <p class="body">
+      <span class="em">
+        This sheet pulls the 12 curses that name where we are now &mdash;
+        verse by verse, King James only. Sit with them. Then come back to
+        the full series.
+      </span>
+    </p>
+
+    <div class="scripture-quote" style="margin-top: 0.8in;">
+      "And it shall come to pass, if thou shalt hearken diligently unto
+      the voice of the LORD thy God, to observe and to do all his
+      commandments... that the LORD thy God will set thee on high above
+      all nations of the earth."
+      <span class="ref">Deuteronomy 28:1 &mdash; the blessing side</span>
+    </div>
+
+    <div class="pagefoot">
+      <span>Deuteronomy 28 &middot; The Cheatsheet</span>
+      <span class="right">aibiblegospels.com</span>
+    </div>
+  </section>
+
+  <!-- ── Page 3 — The mapping ─────────────────────────────── -->
+  <section class="page">
+    <p class="eyebrow-sm">The 12 verses</p>
+    <h1 class="section">Where the prophecy <span class="gold">lands now.</span></h1>
+
+    <table class="map">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Verse</th>
+          <th>King James</th>
+          <th>Where you see it now</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="num">01</td>
+          <td class="verse">Deut 28:15</td>
+          <td class="kjv">"all these curses shall come upon thee, and overtake thee: if thou wilt not hearken unto the voice of the LORD thy God…"</td>
+          <td class="now">Root cause. Broken covenant, not bad luck.</td>
+        </tr>
+        <tr>
+          <td class="num">02</td>
+          <td class="verse">Deut 28:25</td>
+          <td class="kjv">"The LORD shall cause thee to be smitten before thine enemies… and shalt flee seven ways before them…"</td>
+          <td class="now">Mass incarceration. Fugitive era.</td>
+        </tr>
+        <tr>
+          <td class="num">03</td>
+          <td class="verse">Deut 28:32</td>
+          <td class="kjv">"Thy sons and thy daughters shall be given unto another people, and thine eyes shall look, and fail with longing for them all the day long…"</td>
+          <td class="now">Family separation. Foster pipeline.</td>
+        </tr>
+        <tr>
+          <td class="num">04</td>
+          <td class="verse">Deut 28:37</td>
+          <td class="kjv">"thou shalt become an astonishment, a proverb, and a byword, among all nations whither the LORD shall lead thee."</td>
+          <td class="now">The byword of every culture.</td>
+        </tr>
+        <tr>
+          <td class="num">05</td>
+          <td class="verse">Deut 28:43</td>
+          <td class="kjv">"The stranger that is within thee shall get up above thee very high; and thou shalt come down very low."</td>
+          <td class="now">Stranger thriving in the land you built.</td>
+        </tr>
+        <tr>
+          <td class="num">06</td>
+          <td class="verse">Deut 28:48</td>
+          <td class="kjv">"Therefore shalt thou serve thine enemies… in hunger, and in thirst, and in nakedness, and in want of all things…"</td>
+          <td class="now">The literal description of the Middle Passage.</td>
+        </tr>
+        <tr>
+          <td class="num">07</td>
+          <td class="verse">Deut 28:49</td>
+          <td class="kjv">"The LORD shall bring a nation against thee from far… as swift as the eagle flieth; a nation whose tongue thou shalt not understand…"</td>
+          <td class="now">The eagle. The unknown tongue. The kidnap.</td>
+        </tr>
+        <tr>
+          <td class="num">08</td>
+          <td class="verse">Deut 28:64</td>
+          <td class="kjv">"And the LORD shall scatter thee among all people, from the one end of the earth even unto the other…"</td>
+          <td class="now">Diaspora. End to end of the earth.</td>
+        </tr>
+        <tr>
+          <td class="num">09</td>
+          <td class="verse">Deut 28:65</td>
+          <td class="kjv">"And among these nations shalt thou find no ease, neither shall the sole of thy foot have rest…"</td>
+          <td class="now">No land. No peace. No rest.</td>
+        </tr>
+        <tr>
+          <td class="num">10</td>
+          <td class="verse">Deut 28:66</td>
+          <td class="kjv">"And thy life shall hang in doubt before thee; and thou shalt fear day and night, and shalt have none assurance of thy life…"</td>
+          <td class="now">Fear day and night. The condition we wake up in.</td>
+        </tr>
+        <tr>
+          <td class="num">11</td>
+          <td class="verse">Deut 28:67</td>
+          <td class="kjv">"In the morning thou shalt say, Would God it were even! and at even thou shalt say, Would God it were morning!"</td>
+          <td class="now">Depression. The verse names it.</td>
+        </tr>
+        <tr>
+          <td class="num">12</td>
+          <td class="verse">Deut 28:68</td>
+          <td class="kjv">"And the LORD shall bring thee into Egypt again with ships… and there ye shall be sold unto your enemies for bondmen and bondwomen…"</td>
+          <td class="now">Ships back to bondage. Chattel slavery, named by verse.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pagefoot">
+      <span>Deuteronomy 28 &middot; The Cheatsheet</span>
+      <span class="right">aibiblegospels.com</span>
+    </div>
+  </section>
+
+  <!-- ── Page 4 — What to do ──────────────────────────────── -->
+  <section class="page">
+    <p class="eyebrow-sm">Three places to plug in</p>
+    <h1 class="section">What to do with <span class="gold">this.</span></h1>
+
+    <p class="body">
+      Reading the curses isn't the point. Verses 1-14 of the same chapter list
+      the blessings &mdash; they kick in the moment the covenant is kept.
+    </p>
+
+    <ul class="cta-list">
+      <li>
+        <span class="label">The full series</span>
+        <p class="head">The <span class="gold">YouTube</span> channel</p>
+        <p class="blurb">
+          80+ episodes decoding the 12 Tribes, Deuteronomy 28, and the identity
+          hidden in plain sight.<br/>
+          <span class="url">youtube.com/@AIBIBLEGOSPELS</span>
+        </p>
+      </li>
+      <li>
+        <span class="label">The walk</span>
+        <p class="head">Faith <span class="gold">Walk Live</span></p>
+        <p class="blurb">
+          A real minister walking 3,000 miles for the gospel. Live map, daily
+          clips, prayer wall.<br/>
+          <span class="url">faithwalklive.com</span>
+        </p>
+      </li>
+      <li>
+        <span class="label">The daily drops</span>
+        <p class="head">Back on <span class="gold">TikTok</span></p>
+        <p class="blurb">
+          New 60-second decodes posted regularly.<br/>
+          <span class="url">tiktok.com/@aibiblegospels_</span>
+        </p>
+      </li>
+    </ul>
+
+    <div class="scripture-quote">
+      "Then they that feared the LORD spake often one to another: and the LORD
+      hearkened, and heard it, and a book of remembrance was written before him
+      for them that feared the LORD, and that thought upon his name."
+      <span class="ref">Malachi 3:16</span>
+    </div>
+
+    <div class="pagefoot">
+      <span>AI Bible Gospels &middot; aibiblegospels.com</span>
+      <span class="right">aibiblegospels444@gmail.com</span>
+    </div>
+  </section>
+
+</body>
+</html>
