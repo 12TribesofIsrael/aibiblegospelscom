@@ -48,10 +48,10 @@ export default function Home() {
           </h2>
           <p className="text-brand-softgold mt-4 max-w-2xl mx-auto leading-relaxed">
             You found us through a 60-second clip. What we&apos;re building
-            doesn&apos;t fit in 60 seconds. Three places to plug in.
+            doesn&apos;t fit in 60 seconds. Four places to plug in.
           </p>
 
-          <div className="mt-12 grid sm:grid-cols-3 gap-4 text-left">
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
             <a
               href="https://www.youtube.com/@AIBIBLEGOSPELS"
               target="_blank"
@@ -112,6 +112,27 @@ export default function Home() {
               </p>
               <p className="text-brand-gold text-sm mt-4">
                 Latest on TikTok →
+              </p>
+            </a>
+
+            <a
+              href="https://t.me/aibiblegospels"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl border border-brand-border bg-brand-black/30 p-6 hover:border-brand-gold transition"
+            >
+              <p className="text-xs uppercase tracking-[0.2em] text-brand-amber">
+                Direct line
+              </p>
+              <h3 className="text-lg font-semibold text-brand-cloud mt-2">
+                Telegram channel
+              </h3>
+              <p className="text-brand-softgold mt-2 text-sm leading-relaxed">
+                Daily scripture drops and new-video alerts, straight to your
+                phone. No algorithm in the middle.
+              </p>
+              <p className="text-brand-gold text-sm mt-4">
+                Join on Telegram →
               </p>
             </a>
           </div>
@@ -458,6 +479,14 @@ export default function Home() {
                 className="text-brand-softgold hover:text-red-400 transition"
               >
                 YouTube
+              </a>
+              <a
+                href="https://t.me/aibiblegospels"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-softgold hover:text-brand-gold transition"
+              >
+                Telegram
               </a>
               <Link
                 href="/privacy"

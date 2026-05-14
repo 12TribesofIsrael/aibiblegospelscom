@@ -1,6 +1,6 @@
 # AI Bible Gospels
 
-**Current Version: v0.2.0**
+**Current Version: v0.2.1**
 **Status:** LIVE at [aibiblegospels.com](https://aibiblegospels.com) (Vercel, deployed Apr 22, 2026)
 **Owner:** Thomas (AI Bible Gospels)
 

@@ -1,6 +1,6 @@
 # AI Bible Gospels — Parent Brand Site
 
-**Current Version: v0.2.0**
+**Current Version: v0.2.1**
 **Status:** **LIVE in production at [aibiblegospels.com](https://aibiblegospels.com).** Deployed on Vercel since ~Apr 22, 2026. Currently in TikTok app review.
 **Owner:** Thomas (AI Bible Gospels)
 

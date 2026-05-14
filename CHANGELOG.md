@@ -2,6 +2,15 @@
 
 All notable changes to aibiblegospels.com.
 
+## [0.2.1] — 2026-05-14
+
+### Added
+
+- **Telegram channel surfaced on homepage** — `https://t.me/aibiblegospels` (handle `@aibiblegospels`) now appears in two places:
+  - Welcome / TikTok funnel section: added as a fourth "plug in" card alongside YouTube, Faith Walk Live, and TikTok. Section copy updated from "Three places to plug in" → "Four places to plug in". Grid restructured from `sm:grid-cols-3` → `sm:grid-cols-2 lg:grid-cols-4`.
+  - Footer: Telegram link added to the social row between YouTube and Privacy.
+- Rationale: TikTok visitors landing on `/#welcome` can now connect to the owned audience layer (Telegram) directly from the page — previously Telegram was only reachable via the welcome email after email capture. Both paths now work in parallel. Funnel architecture per the community-hub strategy: TikTok → site → email + Telegram → YouTube.
+
 ## [0.2.0] — 2026-05-12
 
 ### Added
