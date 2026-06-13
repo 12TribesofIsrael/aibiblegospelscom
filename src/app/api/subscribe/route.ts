@@ -1,4 +1,5 @@
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
+import { pushLeadToCrm } from "@/lib/crm";
 
 const RESEND_API = "https://api.resend.com";
 const FROM_LINE = "AI Bible Gospels <info@anointed.app>";
@@ -87,6 +88,17 @@ export async function POST(req: Request) {
       { status: 502 }
     );
   }
+
+  // Mirror the signup into the CRM so every lead lives in one place. Newsletter
+  // subscribers land as contacts (no pipeline stage) — reachable, but not on the
+  // sales board. Runs after the response, so it never delays or breaks the form.
+  after(() =>
+    pushLeadToCrm({
+      email,
+      source: "website-form",
+      tags: ["aibiblegospels", `src:${source}`.slice(0, 80)],
+    }),
+  );
 
   return NextResponse.json({ ok: true });
 }
