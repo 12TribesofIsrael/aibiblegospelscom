@@ -2,6 +2,12 @@
 
 All notable changes to aibiblegospels.com.
 
+## [Unreleased]
+
+### Added
+
+- **CRM lead ingestion** — `/api/subscribe` now also mirrors each signup into the BMB LeadStack CRM as a contact (no pipeline stage; tagged `aibiblegospels` + source), so subscribers live in one place alongside leads from the other sites. Runs via Next `after()` *after* the response is sent, with an 8s timeout and full error-swallowing, so the CRM can never slow or break the subscribe form. New helper [src/lib/crm.ts](src/lib/crm.ts); gated by two new **optional** env vars `BMB_CRM_INGEST_URL` + `BMB_CRM_API_KEY` (push silently no-ops if unset). Follow-up strategy lives in `bmbaiautomations/docs/sales/`.
+
 ## [0.2.1] — 2026-05-14
 
 ### Added
