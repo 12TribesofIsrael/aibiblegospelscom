@@ -38,7 +38,11 @@ export async function pushLeadToCrm(lead: CrmLead): Promise<void> {
         Authorization: `Bearer ${CRM_KEY}`,
         "Content-Type": "application/json",
         // 24h idempotency so a double-submit doesn't create two contacts.
-        "Idempotency-Key": `${lead.source ?? "form"}:${email || name}`,
+        // The CRM only allows [A-Za-z0-9_-:.] — strip everything else (e.g. the
+        // "@" and "+" in emails) or it rejects the whole request with a 400.
+        "Idempotency-Key": `${lead.source ?? "form"}:${email || name}`
+          .replace(/[^A-Za-z0-9_:.-]/g, "-")
+          .slice(0, 255),
       },
       body: JSON.stringify({
         name,
