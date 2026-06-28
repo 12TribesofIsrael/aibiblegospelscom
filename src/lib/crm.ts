@@ -1,65 +1,75 @@
-// CRM lead ingestion — pushes a contact into the BMB LeadStack CRM.
+// CRM lead ingestion — submits a lead into the BMB LeadStack CRM hosted form.
 //
-// Fire-and-forget by design: this never throws and never blocks the caller.
-// If the env vars are missing the push is silently skipped, so the form keeps
-// working even when the CRM is unconfigured or down. Wire it from a route with
-// Next's after() so it runs after the response is sent:
+// Why the FORM endpoint (not /api/v1/contacts): only the hosted-form submit path
+// (/api/forms/<id>/submit) fires the CRM's automation engine (Speed-to-Lead:
+// owner notification + pipeline deal). The /api/v1 contacts API only creates a
+// contact — no follow-up. The endpoint is public (CORS *) and needs no API key —
+// the form id is the capability.
+//
+// Routes into the Anointed sub-account (same AI Bible Gospels brand family).
+//
+// Fire-and-forget by design: never throws, never blocks the caller. If the CRM is
+// unreachable the submit is silently skipped, so the form keeps working. Wire it
+// from a route with Next's after() so it runs after the response is sent:
 //
 //   import { after } from "next/server";
-//   after(() => pushLeadToCrm({ email, source: "website-form", tags: ["..."] }));
+//   after(() => pushLeadToCrm({ email, source: "website-form" }));
 
-const CRM_BASE = process.env.BMB_CRM_INGEST_URL; // e.g. https://bmb-crm.vercel.app
-const CRM_KEY = process.env.BMB_CRM_API_KEY; // LeadStack key: lsk_live_<id>:<secret>
+// Base + form id are public (the form endpoint takes no API key; the form id IS the
+// capability), so they ship as defaults and work without env config. Override via
+// env only if the CRM moves or the Anointed form id changes.
+const CRM_BASE =
+  process.env.BMB_CRM_BASE_URL ??
+  process.env.BMB_CRM_INGEST_URL ??
+  "https://bmb-crm.vercel.app";
+const CRM_FORM_ID =
+  process.env.BMB_CRM_FORM_ID ?? "cNsPnGzNYUB8GAEvbWpX"; // Anointed sub-account hosted form
 
 export type CrmLead = {
-  /** Display name. Falls back to the email when omitted — the CRM requires one. */
+  /** Display name. Falls back to the email when omitted — the form requires one. */
   name?: string;
   email?: string;
   phone?: string;
+  // Accepted for back-compat with existing callers, but the hosted form applies
+  // its own tags / source / pipeline stage, so these are no longer sent.
   company?: string;
-  /** ContactSource value; defaults to "website-form". */
   source?: string;
   tags?: string[];
-  /** "new" puts the lead on the sales board; null/undefined = contact only. */
   pipelineStage?: string | null;
+  /** Optional UTM/referrer attribution to persist on the contact. */
+  attribution?: Record<string, string>;
 };
 
 export async function pushLeadToCrm(lead: CrmLead): Promise<void> {
-  if (!CRM_BASE || !CRM_KEY) return; // not wired up — skip silently
+  if (!CRM_BASE || !CRM_FORM_ID) return; // not wired up — skip silently
 
   const email = (lead.email ?? "").trim().toLowerCase();
   const name = (lead.name ?? "").trim() || email;
-  if (!name) return; // the CRM requires a non-empty name
+  if (!name || !email) return; // the form requires both name + email
+
+  // Form submissions are keyed by field id (see the form's fields[] config).
+  const values: Record<string, string> = { name, email };
+  const phone = (lead.phone ?? "").trim();
+  if (phone) values.phone = phone;
 
   try {
-    const res = await fetch(`${CRM_BASE.replace(/\/$/, "")}/api/v1/contacts`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${CRM_KEY}`,
-        "Content-Type": "application/json",
-        // 24h idempotency so a double-submit doesn't create two contacts.
-        // The CRM only allows [A-Za-z0-9_-:.] — strip everything else (e.g. the
-        // "@" and "+" in emails) or it rejects the whole request with a 400.
-        "Idempotency-Key": `${lead.source ?? "form"}:${email || name}`
-          .replace(/[^A-Za-z0-9_:.-]/g, "-")
-          .slice(0, 255),
+    const res = await fetch(
+      `${CRM_BASE.replace(/\/$/, "")}/api/forms/${CRM_FORM_ID}/submit`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          values,
+          ...(lead.attribution ? { attribution: lead.attribution } : {}),
+        }),
+        signal: AbortSignal.timeout(8000),
       },
-      body: JSON.stringify({
-        name,
-        email,
-        phone: lead.phone ?? "",
-        company: lead.company ?? "",
-        source: lead.source ?? "website-form",
-        tags: lead.tags ?? [],
-        pipeline_stage: lead.pipelineStage ?? null,
-      }),
-      signal: AbortSignal.timeout(8000),
-    });
+    );
     if (!res.ok) {
       const detail = await res.text().catch(() => "");
-      console.error("[crm] ingest failed", res.status, detail.slice(0, 300));
+      console.error("[crm] form submit failed", res.status, detail.slice(0, 300));
     }
   } catch (err) {
-    console.error("[crm] ingest error", err instanceof Error ? err.message : err);
+    console.error("[crm] form submit error", err instanceof Error ? err.message : err);
   }
 }
