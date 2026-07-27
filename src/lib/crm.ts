@@ -25,6 +25,28 @@ const CRM_BASE =
 const CRM_FORM_ID =
   process.env.BMB_CRM_FORM_ID ?? "cNsPnGzNYUB8GAEvbWpX"; // Anointed sub-account hosted form
 
+/**
+ * Per-magnet hosted-form ids. Each LeadStack hosted form carries its own
+ * `settings.autoTags` (e.g. `anything-is-possible`), which is how the CRM knows
+ * which magnet a lead came from — the caller CANNOT set tags on the hosted-form
+ * submit path, so a distinct form is the only way to get a distinct tag.
+ * Unset ids fall back to the default form, so a missing env var never drops the
+ * lead — it just loses the tag.
+ */
+export const MAGNET_FORM_IDS: Record<string, string | undefined> = {
+  deut28: process.env.BMB_CRM_FORM_ID,
+  // Anything Is Possible study guide — Anointed sub-account, autoTags
+  // ["anything-is-possible","study-guide"]. Shipped as a default for the same
+  // reason as the form id above: it's a public capability, not a secret.
+  "study-guide":
+    process.env.BMB_CRM_FORM_ID_AIP ?? "McjOP48RRbUuVQb1yXjR",
+};
+
+/** Resolve a magnet key to its hosted-form id, falling back to the default form. */
+export function magnetFormId(magnet: string | undefined): string {
+  return (magnet && MAGNET_FORM_IDS[magnet]) || CRM_FORM_ID;
+}
+
 export type CrmLead = {
   /** Display name. Falls back to the email when omitted — the form requires one. */
   name?: string;
@@ -38,10 +60,17 @@ export type CrmLead = {
   pipelineStage?: string | null;
   /** Optional UTM/referrer attribution to persist on the contact. */
   attribution?: Record<string, string>;
+  /**
+   * Hosted-form id to submit to. Defaults to the Anointed form. Pass a
+   * magnet-specific id (see `magnetFormId`) so the lead lands on the form whose
+   * autoTags mark which lead magnet it came from.
+   */
+  formId?: string;
 };
 
 export async function pushLeadToCrm(lead: CrmLead): Promise<void> {
-  if (!CRM_BASE || !CRM_FORM_ID) return; // not wired up — skip silently
+  const formId = lead.formId ?? CRM_FORM_ID;
+  if (!CRM_BASE || !formId) return; // not wired up — skip silently
 
   const email = (lead.email ?? "").trim().toLowerCase();
   const name = (lead.name ?? "").trim() || email;
@@ -54,7 +83,7 @@ export async function pushLeadToCrm(lead: CrmLead): Promise<void> {
 
   try {
     const res = await fetch(
-      `${CRM_BASE.replace(/\/$/, "")}/api/forms/${CRM_FORM_ID}/submit`,
+      `${CRM_BASE.replace(/\/$/, "")}/api/forms/${formId}/submit`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

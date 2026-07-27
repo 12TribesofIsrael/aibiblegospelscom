@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>The Mission of Christ — A Study Guide</title>
+<style>
+  /*
+    Anything Is Possible™ companion study guide.
+
+    Palette is the APPAREL palette from anythingispossible/brand/style-guide.md
+    (near-black ground, aged antique gold, off-white body) so the printed guide
+    matches the garment it ships with — not the site it downloads from.
+
+    Every verse is quoted verbatim from the 1611 KJV (with Apocrypha) PDF via
+    pdftotext. Bracketed words are the KJV's own italicised supplied words and
+    are preserved exactly as the source has them.
+
+    Render: powershell scripts/generate-study-guide-pdf.ps1
+  */
+  @page { size: letter; margin: 0; }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0F0F10;
+    color: #F2EFE9;
+    font-family: Georgia, 'Times New Roman', serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 8.5in;
+    height: 11in;
+    /* Bottom padding reserves the footer strip (which sits at bottom:0.5in).
+       Without it, dense pages ran their last paragraph straight through the
+       footer text — caught on pages 3 and 5 of the first render. */
+    padding: 0.7in 0.85in 0.95in;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .eyebrow {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.3em;
+    font-size: 9pt;
+    text-transform: uppercase;
+    color: #C9A227;
+    margin: 0 0 0.28in 0;
+  }
+
+  h1 { font-size: 28pt; color: #E4C46A; margin: 0 0 0.14in 0; line-height: 1.06; }
+  h2 { font-size: 14pt; color: #E4C46A; margin: 0.22in 0 0.08in 0; line-height: 1.2; }
+  p  { font-size: 11pt; line-height: 1.5; margin: 0 0 0.11in 0; }
+
+  .lede { font-size: 12.5pt; line-height: 1.45; color: #F2EFE9; }
+  .muted { color: #9A948A; }
+
+  /* Scripture blocks — the load-bearing element. Scripture before explanation. */
+  .verse {
+    border-left: 3px solid #C9A227;
+    padding: 0.04in 0 0.04in 0.17in;
+    margin: 0.12in 0 0.13in 0;
+  }
+  .verse .text { font-size: 11.5pt; line-height: 1.45; font-style: italic; color: #F2EFE9; margin: 0; }
+  .verse .ref {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 8.5pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #C9A227;
+    margin: 0.07in 0 0 0;
+  }
+
+  .rule { height: 1px; background: #2A2A2C; margin: 0.3in 0; border: 0; }
+
+  ol.steps { margin: 0.1in 0 0 0; padding-left: 0.26in; }
+  ol.steps > li { font-size: 11.5pt; line-height: 1.5; margin-bottom: 0.13in; }
+  ol.steps > li strong { color: #E4C46A; }
+
+  ol.q { margin: 0.06in 0 0.22in 0; padding-left: 0.26in; }
+  ol.q > li { font-size: 11pt; line-height: 1.5; margin-bottom: 0.14in; }
+
+  .writeline { border-bottom: 1px solid #2A2A2C; height: 0.28in; }
+
+  .foot {
+    position: absolute;
+    bottom: 0.5in; left: 0.85in; right: 0.85in;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7.5pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #6B665E;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ── Cover ─────────────────────────────────────────── */
+  .cover {
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    text-align: center; height: 100%;
+  }
+  .cover .brand {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.35em; font-size: 10pt;
+    text-transform: uppercase; color: #C9A227;
+    margin-bottom: 1.15in;
+  }
+  .cover .kicker {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #F2EFE9; margin: 0 0 0.1in 0;
+  }
+  .cover .big {
+    font-size: 54pt; color: #E4C46A; line-height: 0.98;
+    letter-spacing: -0.01em; margin: 0 0 0.34in 0; text-transform: uppercase;
+  }
+  .cover .sub { font-size: 19pt; color: #F2EFE9; font-style: italic; margin: 0 0 0.7in 0; }
+  .cover .versewrap { max-width: 5.1in; }
+  .cover .versewrap .text { font-size: 13pt; font-style: italic; line-height: 1.5; }
+  .cover .versewrap .ref {
+    font-family: Arial, Helvetica, sans-serif; font-size: 8.5pt;
+    letter-spacing: 0.24em; text-transform: uppercase; color: #C9A227; margin-top: 0.12in;
+  }
+  .cover .footline {
+    position: absolute; bottom: 0.75in; left: 0; right: 0; text-align: center;
+    font-family: Arial, Helvetica, sans-serif; font-size: 8pt;
+    letter-spacing: 0.24em; text-transform: uppercase; color: #6B665E;
+  }
+
+  /* ── Summary page ──────────────────────────────────── */
+  .three { display: flex; gap: 0.22in; margin-top: 0.28in; }
+  .three .col { flex: 1; border: 1px solid #2A2A2C; padding: 0.22in 0.2in; }
+  .three .col .lab {
+    font-family: Arial, Helvetica, sans-serif; font-size: 8pt;
+    letter-spacing: 0.22em; text-transform: uppercase; color: #C9A227; margin-bottom: 0.12in;
+  }
+  .three .col .ans { font-size: 12pt; color: #E4C46A; line-height: 1.3; margin: 0 0 0.12in 0; }
+  .three .col p { font-size: 9.5pt; line-height: 1.45; color: #C9C3B8; margin: 0; }
+
+  .back { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%; }
+  .back .big { font-size: 30pt; color: #E4C46A; margin: 0 0 0.3in 0; }
+  .back p { max-width: 4.8in; }
+  .back .url { font-family: Arial, Helvetica, sans-serif; font-size: 12pt; letter-spacing: 0.06em; color: #E4C46A; margin-top: 0.22in; }
+</style>
+</head>
+<body>
+
+<!-- ══ 1. COVER ══ -->
+<section class="page">
+  <div class="cover">
+    <div class="brand">AI Bible Gospels</div>
+    <div class="kicker">Anything Is Possible</div>
+    <h1 class="big">The Mission<br/>of Christ</h1>
+    <div class="sub">The What, The How, and The Why</div>
+    <div class="versewrap">
+      <p class="text">&ldquo;I can do all things through Christ which strengtheneth me.&rdquo;</p>
+      <p class="ref">Philippians 4:13</p>
+    </div>
+    <div class="footline">A Companion Study Guide</div>
+  </div>
+</section>
+
+<!-- ══ 2. OVERVIEW ══ -->
+<section class="page">
+  <p class="eyebrow">Start here</p>
+  <h1>Three questions.</h1>
+  <p class="lede">
+    Philippians 4:13 is quoted more than almost any verse in the Bible. It gets
+    printed on shirts, painted on walls, and said out loud before hard things.
+    But the strength in it is not general. It is tied to a person, and that person
+    came here on a mission.
+  </p>
+  <p>
+    Understand the mission and the verse stops being a slogan. So this guide asks
+    three questions, and answers each one from the text before it explains
+    anything.
+  </p>
+
+  <div class="three">
+    <div class="col">
+      <div class="lab">The What</div>
+      <p class="ans">Bring God&rsquo;s people back to Him.</p>
+      <p>His mission. What He came to do.</p>
+    </div>
+    <div class="col">
+      <div class="lab">The How</div>
+      <p class="ans">Teach them to repent, obey God, love others, and follow His example.</p>
+      <p>His method. How He did it.</p>
+    </div>
+    <div class="col">
+      <div class="lab">The Why</div>
+      <p class="ans">So they can become like their Father and inherit His Kingdom.</p>
+      <p>His purpose. Why it matters.</p>
+    </div>
+  </div>
+
+  <hr class="rule" />
+
+  <h2>How to use this guide</h2>
+  <p>
+    Read the verse first. Sit with it before you read the explanation under it.
+    That order is deliberate, and it is the whole method: authority comes from the
+    text, never from opinion.
+  </p>
+  <p class="muted">
+    Every verse in this guide is quoted from the 1611 King James Bible. Words in
+    [brackets] are the translators&rsquo; own supplied words, kept exactly as
+    printed.
+  </p>
+
+  <div class="foot"><span>The Mission of Christ</span><span>Anything Is Possible&trade;</span></div>
+</section>
+
+<!-- ══ 3. THE WHAT ══ -->
+<section class="page">
+  <p class="eyebrow">Part One</p>
+  <h1>The What</h1>
+  <p class="lede">His mission: to bring God&rsquo;s people back to Him.</p>
+
+  <div class="verse">
+    <p class="text">&ldquo;For the Son of man is come to seek and to save that which was lost.&rdquo;</p>
+    <p class="ref">Luke 19:10</p>
+  </div>
+
+  <p>
+    A shepherd with a hundred sheep does not shrug when one wanders off. He leaves
+    the ninety and nine and goes after the one. That is the posture the whole
+    mission is built on. Not waiting to be found. Going to find.
+  </p>
+
+  <h2>He came to seek the lost</h2>
+  <p>
+    Seeking is the first movement. Before any teaching, before any correction,
+    there is a search.
+  </p>
+
+  <h2>He came to fulfil, not to destroy</h2>
+  <div class="verse">
+    <p class="text">&ldquo;Think not that I am come to destroy the law, or the prophets: I am not come to destroy, but to fulfil.&rdquo;</p>
+    <p class="ref">Matthew 5:17</p>
+  </div>
+  <p>
+    The mission is continuous with everything God had already said. He did not
+    arrive to replace the standard. He arrived to complete it.
+  </p>
+
+  <h2>He came to give His life</h2>
+  <div class="verse">
+    <p class="text">&ldquo;For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.&rdquo;</p>
+    <p class="ref">John 3:16</p>
+  </div>
+  <div class="verse">
+    <p class="text">&ldquo;Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.&rdquo;</p>
+    <p class="ref">John 14:6</p>
+  </div>
+  <p>
+    Seeking, fulfilling, and giving. In one sentence: <strong>to reconcile people
+    to God by calling them to repentance, teaching them to obey God, and making a
+    way for eternal life through His sacrifice.</strong>
+  </p>
+
+  <div class="foot"><span>Part One &middot; The What</span><span>Anything Is Possible&trade;</span></div>
+</section>
+
+<!-- ══ 4. THE HOW ══ -->
+<section class="page">
+  <p class="eyebrow">Part Two</p>
+  <h1>The How</h1>
+  <p class="lede">His method: teach them to repent, obey God, love others, and follow His example.</p>
+
+  <div class="verse">
+    <p class="text">&ldquo;From that time Jesus began to preach, and to say, Repent: for the kingdom of heaven is at hand.&rdquo;</p>
+    <p class="ref">Matthew 4:17</p>
+  </div>
+  <p>
+    The very first word of the public ministry is <em>repent</em>. Not a footnote.
+    The opening instruction.
+  </p>
+
+  <h2>Five steps, in order</h2>
+  <ol class="steps">
+    <li><strong>Repent.</strong> Turn. Change direction. Everything downstream depends on this one.</li>
+    <li><strong>Believe God.</strong> Not believe <em>about</em> Him. Take Him at His word.</li>
+    <li><strong>Learn God&rsquo;s word.</strong> You cannot obey what you have never read.</li>
+    <li><strong>Live it.</strong> Obedience is the evidence, and He said so plainly.</li>
+    <li><strong>Help others do the same.</strong> The method is designed to be handed on.</li>
+  </ol>
+
+  <div class="verse">
+    <p class="text">&ldquo;If ye love me, keep my commandments.&rdquo;</p>
+    <p class="ref">John 14:15</p>
+  </div>
+  <p>
+    Love and obedience are not two separate things here. One proves the other.
+  </p>
+
+  <div class="verse">
+    <p class="text">&ldquo;Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost: Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, [even] unto the end of the world. Amen.&rdquo;</p>
+    <p class="ref">Matthew 28:19&ndash;20</p>
+  </div>
+  <p>
+    Note what is commanded: not merely to inform people, but to teach them to
+    <em>observe</em>. The goal was always a changed life, not a full head.
+  </p>
+  <p>
+    In one sentence: <strong>teach the truth, live the truth, invite people to
+    repent, and make disciples who will do the same.</strong>
+  </p>
+
+  <div class="foot"><span>Part Two &middot; The How</span><span>Anything Is Possible&trade;</span></div>
+</section>
+
+<!-- ══ 5. THE WHY ══ -->
+<section class="page">
+  <p class="eyebrow">Part Three</p>
+  <h1>The Why</h1>
+  <p class="lede">His purpose: so they can become like their Father, glorify Him, and inherit His Kingdom.</p>
+
+  <p>
+    A father does not correct a son to win an argument. He corrects him so the son
+    grows into someone who carries the family name well. That is the shape of this
+    last question.
+  </p>
+
+  <h2>To restore the relationship</h2>
+  <div class="verse">
+    <p class="text">&ldquo;That they all may be one; as thou, Father, [art] in me, and I in thee, that they also may be one in us: that the world may believe that thou hast sent me.&rdquo;</p>
+    <p class="ref">John 17:21</p>
+  </div>
+
+  <h2>To transform the character</h2>
+  <div class="verse">
+    <p class="text">&ldquo;Be ye therefore perfect, even as your Father which is in heaven is perfect.&rdquo;</p>
+    <p class="ref">Matthew 5:48</p>
+  </div>
+
+  <h2>To prepare us for the Kingdom</h2>
+  <div class="verse">
+    <p class="text">&ldquo;From that time Jesus began to preach, and to say, Repent: for the kingdom of heaven is at hand.&rdquo;</p>
+    <p class="ref">Matthew 4:17</p>
+  </div>
+  <p class="muted">
+    The same verse that opened the method also names the destination. The turning
+    and the Kingdom are one subject.
+  </p>
+
+  <h2>To glorify the Father</h2>
+  <div class="verse">
+    <p class="text">&ldquo;For I came down from heaven, not to do mine own will, but the will of him that sent me.&rdquo;</p>
+    <p class="ref">John 6:38</p>
+  </div>
+  <p>
+    Every part of the mission points back to the One who sent Him. Which is where
+    Philippians 4:13 finally lands: the strength was never yours on its own, and it
+    was never meant to be.
+  </p>
+
+  <div class="foot"><span>Part Three &middot; The Why</span><span>Anything Is Possible&trade;</span></div>
+</section>
+
+<!-- ══ 6. REFLECTION ══ -->
+<section class="page">
+  <p class="eyebrow">Work it through</p>
+  <h1>Reflection questions</h1>
+  <p class="muted">Answer honestly. Write in the margins. This page is meant to be used, not kept clean.</p>
+
+  <h2>On The What</h2>
+  <ol class="q">
+    <li>Luke 19:10 says He came to seek. Where were you when you were sought?</li>
+    <li>Matthew 5:17 says He came to fulfil, not destroy. What have you been taught about the law that this verse corrects?</li>
+    <li>If the mission was to bring people back to God, who is currently far off that you have stopped going after?</li>
+  </ol>
+
+  <h2>On The How</h2>
+  <ol class="q">
+    <li>His first public word was <em>repent</em>. What is the specific thing you already know you need to turn from?</li>
+    <li>Of the five steps &mdash; repent, believe, learn, live, help others &mdash; which one are you actually stuck on?</li>
+    <li>John 14:15 ties love to keeping commandments. Where does your obedience contradict what you say you believe?</li>
+    <li>Matthew 28:20 says teach them to <em>observe</em>, not just to know. Who are you teaching by how you live?</li>
+  </ol>
+
+  <h2>On The Why</h2>
+  <ol class="q">
+    <li>Matthew 5:48 sets the standard as the Father Himself. Does that read to you as pressure or as purpose? Why?</li>
+    <li>John 6:38 &mdash; He came to do the will of the One who sent Him. Whose will are you actually doing this week?</li>
+    <li>If the Kingdom is the destination, what are you carrying that will not make the trip?</li>
+  </ol>
+
+  <div class="foot"><span>Reflection</span><span>Anything Is Possible&trade;</span></div>
+</section>
+
+<!-- ══ 7. PRAYER + MEMORY VERSES ══ -->
+<section class="page">
+  <p class="eyebrow">Close</p>
+  <h1>A prayer</h1>
+  <div class="verse">
+    <p class="text">
+      Father, I have read what your Son came to do. Thank you for sending Him to
+      seek me before I ever looked for you.<br/><br/>
+      Teach me to repent, and not just to feel sorry. Give me a hunger for your
+      word, and the honesty to live what I find in it. Where I have said I love you
+      and not kept your commandments, forgive me and change me.<br/><br/>
+      Make me like my Father. Use my life to bring somebody else back to you. And
+      when the work is harder than I am, remind me that the strength was never mine
+      &mdash; that I can do all things through Christ, which strengtheneth me.<br/><br/>
+      In Yeshua&rsquo;s name. Amen.
+    </p>
+  </div>
+
+  <hr class="rule" />
+
+  <p class="eyebrow">Commit these</p>
+  <h1 style="font-size:22pt;">Memory verses</h1>
+  <p class="muted">Four verses. One for the mission, one for the method, one for the purpose, one for the road.</p>
+
+  <div class="verse">
+    <p class="text">&ldquo;For the Son of man is come to seek and to save that which was lost.&rdquo;</p>
+    <p class="ref">Luke 19:10 &middot; the mission</p>
+  </div>
+  <div class="verse">
+    <p class="text">&ldquo;If ye love me, keep my commandments.&rdquo;</p>
+    <p class="ref">John 14:15 &middot; the method</p>
+  </div>
+  <div class="verse">
+    <p class="text">&ldquo;Be ye therefore perfect, even as your Father which is in heaven is perfect.&rdquo;</p>
+    <p class="ref">Matthew 5:48 &middot; the purpose</p>
+  </div>
+  <div class="verse">
+    <p class="text">&ldquo;I can do all things through Christ which strengtheneth me.&rdquo;</p>
+    <p class="ref">Philippians 4:13 &middot; the road</p>
+  </div>
+
+  <div class="foot"><span>Prayer &amp; Memory Verses</span><span>Anything Is Possible&trade;</span></div>
+</section>
+
+<!-- ══ 8. ONE-PAGE SUMMARY ══ -->
+<section class="page">
+  <p class="eyebrow">Tear this out</p>
+  <h1>The mission on one page</h1>
+
+  <div class="three" style="margin-top:0.34in;">
+    <div class="col">
+      <div class="lab">What</div>
+      <p class="ans">Bring God&rsquo;s people back to Him.</p>
+      <p>Seek the lost. Fulfil the law. Give His life.</p>
+      <p style="margin-top:0.12in;color:#9A948A;">Luke 19:10 &middot; Matt 5:17 &middot; John 3:16 &middot; John 14:6</p>
+    </div>
+    <div class="col">
+      <div class="lab">How</div>
+      <p class="ans">Repent, believe, learn, live, hand it on.</p>
+      <p>Teach the truth, live the truth, make disciples who do the same.</p>
+      <p style="margin-top:0.12in;color:#9A948A;">Matt 4:17 &middot; John 14:15 &middot; Matt 28:19&ndash;20</p>
+    </div>
+    <div class="col">
+      <div class="lab">Why</div>
+      <p class="ans">Become like the Father. Inherit the Kingdom.</p>
+      <p>Restore the relationship. Transform the character. Glorify Him.</p>
+      <p style="margin-top:0.12in;color:#9A948A;">John 17:21 &middot; Matt 5:48 &middot; John 6:38</p>
+    </div>
+  </div>
+
+  <hr class="rule" />
+
+  <div class="verse" style="border-left-width:4px;">
+    <p class="text" style="font-size:15pt;">&ldquo;I can do all things through Christ which strengtheneth me.&rdquo;</p>
+    <p class="ref">Philippians 4:13</p>
+  </div>
+
+  <p class="muted" style="margin-top:0.3in;">
+    Understand these three words &mdash; what, how, why &mdash; and you understand
+    the gospel. Everything else is detail hanging off them.
+  </p>
+
+  <div class="foot"><span>One-page summary</span><span>Anything Is Possible&trade;</span></div>
+</section>
+
+<!-- ══ 9. BACK COVER ══ -->
+<section class="page">
+  <div class="back">
+    <div class="brand" style="font-family:Arial,Helvetica,sans-serif;letter-spacing:0.35em;font-size:10pt;text-transform:uppercase;color:#C9A227;margin-bottom:0.9in;">AI Bible Gospels</div>
+    <h1 class="big">Keep going.</h1>
+    <p>
+      The teaching this guide came from is on the campaign page, along with a
+      version made for ages 8 to 12. Watch it with your family. Work back through
+      these questions together.
+    </p>
+    <p class="url">aibiblegospels.com/anything-is-possible</p>
+    <p style="margin-top:0.4in;" class="muted">
+      Scripture opened up verse by verse, every week, on the AI Bible Gospels
+      channel.
+    </p>
+    <p class="url" style="font-size:10.5pt;">youtube.com/@AIBIBLEGOSPELS</p>
+    <div class="footline" style="position:absolute;bottom:0.75in;left:0;right:0;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:8pt;letter-spacing:0.24em;text-transform:uppercase;color:#6B665E;">
+      Anything Is Possible&trade; &middot; Through Christ&trade;
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
