@@ -134,6 +134,58 @@ export default function AnythingIsPossible() {
         </div>
       </section>
 
+      {/* ── THE FOUNDATION ──
+          Sits directly under the hero, on this site only. Never on
+          faithwalklive.com, which sells nothing. Framed as honouring Minister
+          Zay, never as endorsement — Faith Walk Live is supporter-built and is
+          not official HMBL. No incident specifics here; those live only on
+          faithwalklive.com. */}
+      <section className="border-t border-brand-border">
+        <div className="max-w-3xl mx-auto px-4 py-20 text-center">
+          <p
+            style={{ fontFamily: "var(--font-anton)" }}
+            className="text-3xl sm:text-4xl md:text-5xl text-brand-gold uppercase leading-[1.05]"
+          >
+            Through Christ,
+            <br />
+            anything is possible
+          </p>
+
+          <div className="mt-12 space-y-6 text-lg text-brand-softgold leading-relaxed">
+            <p>
+              If you found us because of the Faith Walk &mdash; or through a
+              video, a link someone sent you, a search you half-forgot you
+              typed &mdash; it wasn&apos;t a mistake. You didn&apos;t land here
+              by accident.
+            </p>
+            <p>
+              A man set out to walk three thousand miles across this country on
+              faith. Not for a sponsor. Not for a following. He walked because
+              he believed the God he serves would carry him, and he kept
+              walking when it would have been easier to stop.
+            </p>
+            <p>
+              We salute{" "}
+              <span className="text-brand-gold">Minister Zay</span> for that,
+              and we say plainly what he would say first: without Christ, none
+              of this exists. Not the walk. Not this teaching. Not this page.
+            </p>
+            <p
+              style={{ fontFamily: "var(--font-oswald)" }}
+              className="text-xl sm:text-2xl text-brand-cloud pt-2"
+            >
+              So whatever it was you wanted to do, to be, or to create &mdash;
+              the thing you set down because it looked too far &mdash; pick it
+              back up.
+            </p>
+            <p className="text-brand-bronze text-base">
+              That is what the verse on this shirt actually means, and it is
+              what the teaching below is for.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── THE TEACHING ── */}
       <section
         id="teaching"
