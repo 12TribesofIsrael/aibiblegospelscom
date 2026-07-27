@@ -29,7 +29,7 @@ const VIDEO_ADULT = "_-v5yU3iUH8";
 /** MissionOfChrist_kids.mp4 — public, declared made-for-kids (no cards/comments). */
 const VIDEO_KIDS = "fzzAiSv4opg";
 /** Printify Pop-Up storefront URL once the sales channel is connected. */
-const SHOP_URL = "";
+const SHOP_URL = "https://anything-is-possible-co.printify.me";
 // ─────────────────────────────────────────────────────────────────────────────
 
 const CHANNEL = "https://www.youtube.com/@AIBIBLEGOSPELS";
