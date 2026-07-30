@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { trackLead } from "@/lib/pixel";
+import { getStoredAttribution } from "@/lib/attribution";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -34,6 +36,12 @@ export default function SubscribeForm({ source = "welcome" }: { source?: string 
         return;
       }
 
+      // Tell the ad platforms a lead converted. Only on the real success path —
+      // a Lead fired before the server confirms would inflate every count.
+      trackLead({
+        campaign: getStoredAttribution()?.utmCampaign,
+        magnet: "deut28",
+      });
       setStatus("success");
     } catch {
       setStatus("error");

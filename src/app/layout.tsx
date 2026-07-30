@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import Tracking from "@/components/Tracking";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -104,7 +105,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        {/* Vercel counts the traffic; Tracking attributes it (GA4 / Meta / TikTok
+            + first-touch UTM capture). Each pixel stays dark until its
+            NEXT_PUBLIC_* id is set in Vercel. */}
         <Analytics />
+        <Tracking />
       </body>
     </html>
   );

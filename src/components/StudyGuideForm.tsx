@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { trackLead } from "@/lib/pixel";
+import { getStoredAttribution } from "@/lib/attribution";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -41,6 +43,12 @@ export default function StudyGuideForm({ source = "aip-page" }: { source?: strin
         return;
       }
 
+      // Same magnet key the route uses, so the pixel event and the CRM's
+      // autoTags name the same thing when you reconcile them later.
+      trackLead({
+        campaign: getStoredAttribution()?.utmCampaign,
+        magnet: "study-guide",
+      });
       setStatus("success");
     } catch {
       setStatus("error");

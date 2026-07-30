@@ -1,5 +1,6 @@
 import { NextResponse, after } from "next/server";
 import { pushLeadToCrm, magnetFormId } from "@/lib/crm";
+import { readAttributionFromCookies } from "@/lib/attribution-server";
 
 const RESEND_API = "https://api.resend.com";
 const FROM_LINE = "AI Bible Gospels <info@anointed.app>";
@@ -126,12 +127,19 @@ export async function POST(req: Request) {
   // sales board. The form id carries the magnet's autoTags, which is the ONLY way
   // to tag on this path. Runs after the response, so it never delays or breaks
   // the form.
+  // Read the first-touch UTM cookie NOW, while the request is still in scope —
+  // after() runs post-response and shouldn't depend on the Request object.
+  // Without this the CRM records the lead with a blank source, which is
+  // unattributable forever (see ecosystem/TRACKING.md Part 5).
+  const attribution = readAttributionFromCookies(req);
+
   after(() =>
     pushLeadToCrm({
       email,
       source: "website-form",
       formId: magnetFormId(magnetKey),
       tags: [`aibiblegospels`, `src:${source}`.slice(0, 80)],
+      ...(attribution ? { attribution } : {}),
     }),
   );
 
