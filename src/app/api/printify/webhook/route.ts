@@ -135,16 +135,22 @@ export async function POST(req: Request) {
       item?.variant_label ?? "",
     );
 
+    // The CRM's form-submit endpoint keeps a fixed allow-list of attribution
+    // keys (the UTM set + fbclid/gclid/landingPage/referrer) and silently drops
+    // anything else, so the order details have to be carried on those keys
+    // rather than on names of our own. utmSource also becomes the contact's
+    // `source`, which is why "printify" goes there.
     await pushLeadToCrm({
       name: name || email,
       email,
       formId: BUYER_FORM_ID,
       attribution: {
-        source: "printify",
-        shop_id: shopId,
-        order_id: orderId,
-        ...(item?.title ? { product: item.title } : {}),
-        ...(item?.variant_label ? { variant: item.variant_label } : {}),
+        utmSource: "printify",
+        utmMedium: "purchase",
+        utmCampaign: "anything-is-possible",
+        utmContent: [item?.title, item?.variant_label].filter(Boolean).join(" — "),
+        utmTerm: orderId,
+        landingPage: `https://printify.com/app/store/${shopId}/dashboard`,
       },
     });
   });
