@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>The Complete Biblical Timeline — Reading Plan</title>
+<style>
+  @page { size: letter; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; background: #0A0A2A; color: #F5DEB3;
+    font-family: Georgia, 'Times New Roman', serif;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .page { width: 8.5in; height: 11in; padding: 0.75in 0.85in; page-break-after: always; position: relative; overflow: hidden; }
+  .page:last-child { page-break-after: auto; }
+
+  .cover { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%; padding-bottom: 1.2in; }
+  .cover .eyebrow { font-family: Arial, Helvetica, sans-serif; letter-spacing: 0.35em; font-size: 11pt; text-transform: uppercase; color: #D4A04A; margin-bottom: 0.7in; }
+  .cover .title { font-size: 46pt; color: #E8C46B; line-height: 1.02; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 0.15in 0; }
+  .cover .subtitle { font-size: 24pt; color: #F0E6D2; font-style: italic; font-weight: 400; margin: 0 0 0.5in 0; }
+  .cover .deck { font-size: 14pt; color: #F5DEB3; line-height: 1.5; max-width: 5.2in; }
+  .cover .deck .accent { color: #E8C46B; }
+  .cover .footline { position: absolute; bottom: 0.75in; left: 0; right: 0; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 9pt; letter-spacing: 0.25em; text-transform: uppercase; color: #8B5E3C; }
+  .cover .rule { width: 1.5in; height: 1px; background: #E8C46B; margin: 0.4in auto; }
+
+  .eyebrow-sm { font-family: Arial, Helvetica, sans-serif; letter-spacing: 0.3em; font-size: 9pt; text-transform: uppercase; color: #D4A04A; margin: 0 0 0.12in 0; }
+  h1.section { font-size: 26pt; color: #F0E6D2; font-weight: 700; line-height: 1.1; margin: 0 0 0.3in 0; letter-spacing: -0.01em; }
+  h1.section .gold { color: #E8C46B; }
+  p.body { font-size: 11.5pt; line-height: 1.6; color: #F5DEB3; margin: 0 0 0.16in 0; max-width: 6in; }
+  p.body .em { color: #E8C46B; }
+  .stats { display: flex; gap: 0.3in; margin: 0.25in 0 0.35in 0; }
+  .stat { flex: 1; border-top: 1px solid #E8C46B; padding-top: 0.1in; }
+  .stat .n { font-size: 28pt; color: #E8C46B; font-weight: 700; line-height: 1; }
+  .stat .l { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; letter-spacing: 0.2em; text-transform: uppercase; color: #D4A04A; margin-top: 0.06in; }
+
+  table.map { width: 100%; border-collapse: collapse; font-size: 9.6pt; }
+  table.map th { text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt; letter-spacing: 0.18em; text-transform: uppercase; color: #D4A04A; padding: 0 0.08in 0.08in 0; border-bottom: 1px solid #E8C46B; }
+  table.map td { padding: 0.055in 0.08in 0.055in 0; border-bottom: 1px solid #1a1a4a; vertical-align: top; color: #F5DEB3; line-height: 1.3; }
+  table.map td.num { font-family: 'Courier New', monospace; color: #8B5E3C; width: 0.35in; }
+  table.map td.book { color: #F0E6D2; font-weight: 700; width: 2.35in; }
+  table.map td.book .ch { font-weight: 400; color: #E8C46B; }
+  table.map td.event { color: #F5DEB3; }
+  table.map td.date { font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; color: #D4A04A; width: 1.15in; white-space: nowrap; }
+  table.map tr.season td { padding-top: 0.14in; padding-bottom: 0.05in; border-bottom: 1px solid #E8C46B; color: #F0E6D2; font-weight: 700; font-size: 10.5pt; }
+  table.map tr.season .snum { font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt; letter-spacing: 0.2em; text-transform: uppercase; color: #D4A04A; margin-right: 0.12in; }
+  table.map tr.season .sera { float: right; font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: 400; color: #8B5E3C; }
+
+  .cta-list { margin: 0.2in 0 0 0; padding: 0; list-style: none; }
+  .cta-list li { padding: 0.12in 0; border-top: 1px solid #1a1a4a; }
+  .cta-list li:last-child { border-bottom: 1px solid #1a1a4a; }
+  .cta-list .k { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; letter-spacing: 0.2em; text-transform: uppercase; color: #D4A04A; display: block; margin-bottom: 0.03in; }
+  .cta-list .v { font-size: 10.5pt; color: #F5DEB3; line-height: 1.45; margin: 0; }
+  .cta-list .url { font-family: 'Courier New', monospace; color: #E8C46B; font-size: 10pt; }
+
+  .scripture-quote { padding-left: 0.2in; border-left: 2px solid rgba(232,196,107,0.6); color: #F5DEB3; font-size: 11pt; line-height: 1.55; font-style: italic; max-width: 5.5in; }
+  .scripture-quote .ref { display: block; margin-top: 0.08in; font-family: Arial, Helvetica, sans-serif; font-style: normal; text-transform: uppercase; letter-spacing: 0.18em; font-size: 8pt; color: #8B5E3C; }
+  .pagefoot { position: absolute; left: 0.85in; right: 0.85in; bottom: 0.5in; border-top: 1px solid #1a1a4a; padding-top: 0.15in; font-family: Arial, Helvetica, sans-serif; font-size: 8pt; letter-spacing: 0.18em; text-transform: uppercase; color: #8B5E3C; display: flex; justify-content: space-between; }
+  .pagefoot .right { color: #D4A04A; }
+</style>
+</head>
+<body>
+  <!-- Page 1 - Cover -->
+  <section class="page cover">
+    <p class="eyebrow">AI Bible Gospels</p>
+    <h1 class="title">THE COMPLETE<br/>BIBLICAL TIMELINE</h1>
+    <p class="subtitle">The Reading Plan</p>
+    <div class="rule"></div>
+    <p class="deck">
+      <span class="accent">81 books. 1,362 chapters.</span> In the order the events actually happened.<br/>
+      The 1611 King James Bible with the Apocrypha restored.
+    </p>
+    <p class="footline">Creation to Revelation &middot; aibiblegospels.com</p>
+  </section>
+
+  <!-- Page 2 - How to use it -->
+  <section class="page">
+    <p class="eyebrow-sm">Start here</p>
+    <h1 class="section">Your table of contents is not a <span class="gold">timeline.</span></h1>
+    <p class="body">
+      The Bible you own groups its books by type: law, history, poetry, prophets, letters. It never tells you
+      when anything happened. So you finish Malachi, turn one page, and land in Matthew four hundred years
+      later with nobody explaining what went on in between.
+    </p>
+    <p class="body">
+      This plan puts the books in the order the events unfolded, and it puts the Apocrypha back between the
+      Old and New Testaments, where it sat in 1611. Read it this way and the prophets land where they were
+      always going to land. <span class="em">Chronology reveals context.</span>
+    </p>
+    <div class="stats">
+      <div class="stat"><div class="n">18</div><div class="l">Seasons</div></div>
+      <div class="stat"><div class="n">81</div><div class="l">Books</div></div>
+      <div class="stat"><div class="n">84</div><div class="l">Readings</div></div>
+      <div class="stat"><div class="n">1,362</div><div class="l">Chapters</div></div>
+    </div>
+    <p class="body">
+      <span class="em">How to read it.</span> Take the readings in order, one a day if you can. Each row on the
+      pages that follow is one reading: the book, the chapters, and where it sits in the story. Every reading
+      is also one episode of the series on the channel, narrated word for word from the 1611 text, so you can
+      read it, listen to it, or both.
+    </p>
+    <div class="scripture-quote" style="margin-top:0.7in;">In the beginning God created the heaven and the earth.<span class="ref">Genesis 1:1</span></div>
+    <div class="pagefoot">
+      <span>The Complete Biblical Timeline &middot; Reading Plan</span>
+      <span class="right">aibiblegospels.com &middot; 2 / 8</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <p class="eyebrow-sm">The order</p><h1 class="section">Read it the way it <span class="gold">happened.</span></h1>
+    <table class="map">
+      <thead><tr><th>#</th><th>Book &amp; chapters</th><th>What happens</th><th>When</th></tr></thead>
+      <tbody>
+        <tr class="season"><td colspan="4"><span class="snum">Season 1</span> Creation &amp; Early World<span class="sera">c. 4000–2000 BC</span></td></tr><tr><td class="num">01</td><td class="book">Genesis <span class="ch">1–11</span></td><td class="event">Creation, the Flood, Babel</td><td class="date">c. 4000 BC</td></tr><tr><td class="num">02</td><td class="book">Job <span class="ch">1–42</span></td><td class="event">Job&#x27;s Trials</td><td class="date">c. 2000–1800 BC</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 2</span> Patriarchs<span class="sera">c. 2000–1800 BC</span></td></tr><tr><td class="num">03</td><td class="book">Genesis <span class="ch">12–50</span></td><td class="event">Patriarchs: Abraham, Isaac, Jacob</td><td class="date">c. 2000–1800 BC</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 3</span> Egypt &amp; Exodus<span class="sera">c. 1800–1400 BC</span></td></tr><tr><td class="num">04</td><td class="book">Exodus <span class="ch">1–40</span></td><td class="event">The Exodus</td><td class="date">c. 1446 BC</td></tr><tr><td class="num">05</td><td class="book">Leviticus <span class="ch">1–27</span></td><td class="event">The Law Given at Sinai</td><td class="date">c. 1445 BC</td></tr><tr><td class="num">06</td><td class="book">Numbers <span class="ch">1–36</span></td><td class="event">Forty Years in the Wilderness</td><td class="date">c. 1445–1406 BC</td></tr><tr><td class="num">07</td><td class="book">Deuteronomy <span class="ch">1–34</span></td><td class="event">Moses&#x27; Final Words</td><td class="date">c. 1406 BC</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 4</span> Conquest &amp; Judges<span class="sera">c. 1400–1050 BC</span></td></tr><tr><td class="num">08</td><td class="book">Joshua <span class="ch">1–24</span></td><td class="event">Israel Enters Canaan</td><td class="date">c. 1400 BC</td></tr><tr><td class="num">09</td><td class="book">Judges <span class="ch">1–21</span></td><td class="event">Judges Rule Israel</td><td class="date">c. 1380–1050 BC</td></tr><tr><td class="num">10</td><td class="book">Ruth <span class="ch">1–4</span></td><td class="event">Ruth&#x27;s Story</td><td class="date">c. 1100 BC</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 5</span> Kingdom of Israel<span class="sera">c. 1050–930 BC</span></td></tr><tr><td class="num">11</td><td class="book">1 Samuel <span class="ch">1–31</span></td><td class="event">Samuel and Saul</td><td class="date">c. 1100–1010 BC</td></tr><tr><td class="num">12</td><td class="book">2 Samuel <span class="ch">1–24</span></td><td class="event">David Becomes King</td><td class="date">c. 1010–970 BC</td></tr><tr><td class="num">13</td><td class="book">Psalms <span class="ch">1–150</span></td><td class="event">The Songs of David</td><td class="date">c. 1010–970 BC</td></tr><tr><td class="num">14</td><td class="book">1 Chronicles <span class="ch">1–29</span></td><td class="event">David&#x27;s Full Record</td><td class="date">c. 1010–970 BC</td></tr><tr><td class="num">15</td><td class="book">1 Kings <span class="ch">1–11</span></td><td class="event">Solomon&#x27;s Reign</td><td class="date">c. 970–930 BC</td></tr><tr><td class="num">16</td><td class="book">2 Chronicles <span class="ch">1–9</span></td><td class="event">Solomon Builds the Temple</td><td class="date">c. 970–930 BC</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 6</span> Divided Kingdom<span class="sera">c. 930–586 BC</span></td></tr><tr><td class="num">17</td><td class="book">1 Kings <span class="ch">12–22</span></td><td class="event">Kingdom Divides; Elijah</td><td class="date">c. 930–850 BC</td></tr><tr><td class="num">18</td><td class="book">2 Kings <span class="ch">1–25</span></td><td class="event">Elisha; Fall of Israel and Judah</td><td class="date">c. 850–586 BC</td></tr>
+      </tbody>
+    </table>
+    <div class="pagefoot">
+      <span>The Complete Biblical Timeline &middot; Reading Plan</span>
+      <span class="right">aibiblegospels.com &middot; 3 / 8</span>
+    </div>
+  </section>
+  <section class="page">
+    <p class="eyebrow-sm">The order, continued</p>
+    <table class="map">
+      <thead><tr><th>#</th><th>Book &amp; chapters</th><th>What happens</th><th>When</th></tr></thead>
+      <tbody>
+        <tr><td class="num">19</td><td class="book">2 Chronicles <span class="ch">10–36</span></td><td class="event">Kings of Judah</td><td class="date">c. 930–586 BC</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 7</span> Prophets During the Kingdoms<span class="sera">c. 830–586 BC</span></td></tr><tr><td class="num">20</td><td class="book">Joel <span class="ch">1–3</span></td><td class="event">Joel&#x27;s Prophecy</td><td class="date">c. 830–800 BC</td></tr><tr><td class="num">21</td><td class="book">Jonah <span class="ch">1–4</span></td><td class="event">Jonah Preaches Nineveh</td><td class="date">c. 760 BC</td></tr><tr><td class="num">22</td><td class="book">Amos <span class="ch">1–9</span></td><td class="event">Amos&#x27; Prophecy</td><td class="date">c. 760–750 BC</td></tr><tr><td class="num">23</td><td class="book">Hosea <span class="ch">1–14</span></td><td class="event">Fall of the Northern Kingdom</td><td class="date">c. 750–715 BC</td></tr><tr><td class="num">24</td><td class="book">Isaiah <span class="ch">1–66</span></td><td class="event">Isaiah&#x27;s Ministry</td><td class="date">c. 740–680 BC</td></tr><tr><td class="num">25</td><td class="book">Micah <span class="ch">1–7</span></td><td class="event">Micah&#x27;s Prophecy</td><td class="date">c. 740–687 BC</td></tr><tr><td class="num">26</td><td class="book">Nahum <span class="ch">1–3</span></td><td class="event">Nahum Prophesies Nineveh&#x27;s Fall</td><td class="date">c. 663–612 BC</td></tr><tr><td class="num">27</td><td class="book">Zephaniah <span class="ch">1–3</span></td><td class="event">The Day of the LORD</td><td class="date">c. 640–630 BC</td></tr><tr><td class="num">28</td><td class="book">Habakkuk <span class="ch">1–3</span></td><td class="event">Habakkuk&#x27;s Questions</td><td class="date">c. 609–605 BC</td></tr><tr><td class="num">29</td><td class="book">Obadiah <span class="ch">1</span></td><td class="event">Obadiah&#x27;s Prophecy against Edom</td><td class="date">c. 586 BC</td></tr><tr><td class="num">30</td><td class="book">Jeremiah <span class="ch">1–52</span></td><td class="event">Fall of Judah</td><td class="date">c. 627–586 BC</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 8</span> Babylonian Exile<span class="sera">c. 586 BC</span></td></tr><tr><td class="num">31</td><td class="book">Lamentations <span class="ch">1–5</span></td><td class="event">Jerusalem Mourns</td><td class="date">c. 586 BC</td></tr><tr><td class="num">32</td><td class="book">Ezekiel <span class="ch">1–48</span></td><td class="event">Ezekiel&#x27;s Ministry</td><td class="date">c. 593–570 BC</td></tr><tr><td class="num">33</td><td class="book">Daniel <span class="ch">1–12</span></td><td class="event">Daniel in Babylon</td><td class="date">c. 605–530 BC</td></tr><tr><td class="num">34</td><td class="book">Prayer of Azariah &amp; Song of the Three Holy Children <span class="ch">1</span></td><td class="event">In the Fiery Furnace</td><td class="date">c. 600 BC</td></tr><tr><td class="num">35</td><td class="book">Susanna <span class="ch">1</span></td><td class="event">Daniel Judges the Elders</td><td class="date">c. 600 BC</td></tr><tr><td class="num">36</td><td class="book">Bel and the Dragon <span class="ch">1</span></td><td class="event">Daniel Exposes the Idols</td><td class="date">c. 540 BC</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 9</span> Exile Writings<span class="sera">c. 722–538 BC</span></td></tr><tr><td class="num">37</td><td class="book">Tobit <span class="ch">1–14</span></td><td class="event">Tobit&#x27;s Story</td><td class="date">c. 722–400 BC</td></tr><tr><td class="num">38</td><td class="book">Baruch <span class="ch">1–5</span></td><td class="event">Written in Exile</td><td class="date">c. 586 BC</td></tr><tr><td class="num">39</td><td class="book">Letter of Jeremiah <span class="ch">6</span></td><td class="event">Companion to Baruch</td><td class="date">c. 586 BC</td></tr>
+      </tbody>
+    </table>
+    <div class="pagefoot">
+      <span>The Complete Biblical Timeline &middot; Reading Plan</span>
+      <span class="right">aibiblegospels.com &middot; 4 / 8</span>
+    </div>
+  </section>
+  <section class="page">
+    <p class="eyebrow-sm">The order, continued</p>
+    <table class="map">
+      <thead><tr><th>#</th><th>Book &amp; chapters</th><th>What happens</th><th>When</th></tr></thead>
+      <tbody>
+        <tr class="season"><td colspan="4"><span class="snum">Season 10</span> Return from Exile<span class="sera">c. 538–400 BC</span></td></tr><tr><td class="num">40</td><td class="book">Ezra <span class="ch">1–10</span></td><td class="event">Return from Exile</td><td class="date">c. 538 BC</td></tr><tr><td class="num">41</td><td class="book">Nehemiah <span class="ch">1–13</span></td><td class="event">Rebuilding of Jerusalem</td><td class="date">c. 445–430 BC</td></tr><tr><td class="num">42</td><td class="book">Haggai <span class="ch">1–2</span></td><td class="event">Rebuild the Temple</td><td class="date">c. 520 BC</td></tr><tr><td class="num">43</td><td class="book">Zechariah <span class="ch">1–14</span></td><td class="event">Visions of the Coming King</td><td class="date">c. 520–480 BC</td></tr><tr><td class="num">44</td><td class="book">1 Esdras <span class="ch">1–9</span></td><td class="event">1 Esdras Events</td><td class="date">c. 538–400 BC</td></tr><tr><td class="num">45</td><td class="book">Prayer of Manasseh <span class="ch">1</span></td><td class="event">A King Repents</td><td class="date">c. 650 BC</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 11</span> Persian Period<span class="sera">c. 483–400 BC</span></td></tr><tr><td class="num">46</td><td class="book">Esther <span class="ch">1–10</span></td><td class="event">Esther Saves Israel</td><td class="date">c. 483–473 BC</td></tr><tr><td class="num">47</td><td class="book">Judith <span class="ch">1–16</span></td><td class="event">Judith&#x27;s Heroism</td><td class="date">c. 600–100 BC</td></tr><tr><td class="num">48</td><td class="book">Esther (Greek) <span class="ch">10–16</span></td><td class="event">The Greek Esther with the Additions</td><td class="date">c. 483–473 BC</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 12</span> Wisdom Literature<span class="sera">c. 970–100 BC</span></td></tr><tr><td class="num">49</td><td class="book">Proverbs <span class="ch">1–31</span></td><td class="event">Solomon&#x27;s Wisdom</td><td class="date">c. 970–930 BC</td></tr><tr><td class="num">50</td><td class="book">Ecclesiastes <span class="ch">1–12</span></td><td class="event">Vanity of Vanities</td><td class="date">c. 970–930 BC</td></tr><tr><td class="num">51</td><td class="book">Song of Solomon <span class="ch">1–8</span></td><td class="event">The Song of Songs</td><td class="date">c. 970–930 BC</td></tr><tr><td class="num">52</td><td class="book">Ecclesiasticus (Sirach) <span class="ch">1–51</span></td><td class="event">Sirach&#x27;s Wisdom</td><td class="date">c. 200–180 BC</td></tr><tr><td class="num">53</td><td class="book">Wisdom of Solomon <span class="ch">1–19</span></td><td class="event">Wisdom of Solomon</td><td class="date">c. 400–100 BC</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 13</span> Greek Oppression &amp; Maccabees<span class="sera">c. 175–135 BC</span></td></tr><tr><td class="num">54</td><td class="book">1 Maccabees <span class="ch">1–16</span></td><td class="event">The Revolt Begins</td><td class="date">c. 175–134 BC</td></tr><tr><td class="num">55</td><td class="book">2 Maccabees <span class="ch">1–15</span></td><td class="event">Martyrdom under Greece</td><td class="date">c. 175–160 BC</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 14</span> Final Old Testament Prophet<span class="sera">c. 430 BC</span></td></tr><tr><td class="num">56</td><td class="book">Malachi <span class="ch">1–4</span></td><td class="event">Malachi&#x27;s Final Prophecy</td><td class="date">c. 430 BC</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 15</span> Bridge to the New Testament<span class="sera">c. 70–135 AD</span></td></tr><tr><td class="num">57</td><td class="book">2 Esdras <span class="ch">1–16</span></td><td class="event">Visions of Ezra</td><td class="date">c. 70–135 AD</td></tr>
+      </tbody>
+    </table>
+    <div class="pagefoot">
+      <span>The Complete Biblical Timeline &middot; Reading Plan</span>
+      <span class="right">aibiblegospels.com &middot; 5 / 8</span>
+    </div>
+  </section>
+  <section class="page">
+    <p class="eyebrow-sm">The order, continued</p>
+    <table class="map">
+      <thead><tr><th>#</th><th>Book &amp; chapters</th><th>What happens</th><th>When</th></tr></thead>
+      <tbody>
+        <tr class="season"><td colspan="4"><span class="snum">Season 16</span> The Messiah Era<span class="sera">c. 5 BC–30 AD</span></td></tr><tr><td class="num">58</td><td class="book">Matthew <span class="ch">1–28</span></td><td class="event">Birth and Ministry of Christ</td><td class="date">c. 5 BC–30 AD</td></tr><tr><td class="num">59</td><td class="book">Mark <span class="ch">1–16</span></td><td class="event">The Servant King</td><td class="date">c. 27–30 AD</td></tr><tr><td class="num">60</td><td class="book">Luke <span class="ch">1–24</span></td><td class="event">The Son of Man</td><td class="date">c. 5 BC–30 AD</td></tr><tr><td class="num">61</td><td class="book">John <span class="ch">1–21</span></td><td class="event">The Word Made Flesh</td><td class="date">c. 27–30 AD</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 17</span> Early Church<span class="sera">c. 30–100 AD</span></td></tr><tr><td class="num">62</td><td class="book">Acts <span class="ch">1–28</span></td><td class="event">The Early Church</td><td class="date">c. 33–62 AD</td></tr><tr><td class="num">63</td><td class="book">James <span class="ch">1–5</span></td><td class="event">Faith and Works</td><td class="date">c. 45–50 AD</td></tr><tr><td class="num">64</td><td class="book">Galatians <span class="ch">1–6</span></td><td class="event">Paul&#x27;s Letters</td><td class="date">c. 49 AD</td></tr><tr><td class="num">65</td><td class="book">1 Thessalonians <span class="ch">1–5</span></td><td class="event">Paul&#x27;s Letters</td><td class="date">c. 50–51 AD</td></tr><tr><td class="num">66</td><td class="book">2 Thessalonians <span class="ch">1–3</span></td><td class="event">Paul&#x27;s Letters</td><td class="date">c. 51–52 AD</td></tr><tr><td class="num">67</td><td class="book">1 Corinthians <span class="ch">1–16</span></td><td class="event">Paul&#x27;s Letters</td><td class="date">c. 55 AD</td></tr><tr><td class="num">68</td><td class="book">2 Corinthians <span class="ch">1–13</span></td><td class="event">Paul&#x27;s Letters</td><td class="date">c. 55–56 AD</td></tr><tr><td class="num">69</td><td class="book">Romans <span class="ch">1–16</span></td><td class="event">Paul&#x27;s Letters</td><td class="date">c. 57 AD</td></tr><tr><td class="num">70</td><td class="book">Ephesians <span class="ch">1–6</span></td><td class="event">Paul&#x27;s Prison Letters</td><td class="date">c. 60–62 AD</td></tr><tr><td class="num">71</td><td class="book">Philippians <span class="ch">1–4</span></td><td class="event">Paul&#x27;s Prison Letters</td><td class="date">c. 60–62 AD</td></tr><tr><td class="num">72</td><td class="book">Colossians <span class="ch">1–4</span></td><td class="event">Paul&#x27;s Prison Letters</td><td class="date">c. 60–62 AD</td></tr><tr><td class="num">73</td><td class="book">Philemon <span class="ch">1</span></td><td class="event">Paul&#x27;s Prison Letters</td><td class="date">c. 60–62 AD</td></tr><tr><td class="num">74</td><td class="book">1 Timothy <span class="ch">1–6</span></td><td class="event">Paul&#x27;s Pastoral Letters</td><td class="date">c. 63–65 AD</td></tr><tr><td class="num">75</td><td class="book">Titus <span class="ch">1–3</span></td><td class="event">Paul&#x27;s Pastoral Letters</td><td class="date">c. 63–65 AD</td></tr><tr><td class="num">76</td><td class="book">2 Timothy <span class="ch">1–4</span></td><td class="event">Paul&#x27;s Last Letter</td><td class="date">c. 66–67 AD</td></tr><tr><td class="num">77</td><td class="book">Hebrews <span class="ch">1–13</span></td><td class="event">General Epistles</td><td class="date">c. 64–70 AD</td></tr><tr><td class="num">78</td><td class="book">1 Peter <span class="ch">1–5</span></td><td class="event">General Epistles</td><td class="date">c. 64–68 AD</td></tr><tr><td class="num">79</td><td class="book">2 Peter <span class="ch">1–3</span></td><td class="event">General Epistles</td><td class="date">c. 66–68 AD</td></tr>
+      </tbody>
+    </table>
+    <div class="pagefoot">
+      <span>The Complete Biblical Timeline &middot; Reading Plan</span>
+      <span class="right">aibiblegospels.com &middot; 6 / 8</span>
+    </div>
+  </section>
+  <section class="page">
+    <p class="eyebrow-sm">The order, continued</p>
+    <table class="map">
+      <thead><tr><th>#</th><th>Book &amp; chapters</th><th>What happens</th><th>When</th></tr></thead>
+      <tbody>
+        <tr><td class="num">80</td><td class="book">1 John <span class="ch">1–5</span></td><td class="event">General Epistles</td><td class="date">c. 85–95 AD</td></tr><tr><td class="num">81</td><td class="book">2 John <span class="ch">1</span></td><td class="event">General Epistles</td><td class="date">c. 85–95 AD</td></tr><tr><td class="num">82</td><td class="book">3 John <span class="ch">1</span></td><td class="event">General Epistles</td><td class="date">c. 85–95 AD</td></tr><tr><td class="num">83</td><td class="book">Jude <span class="ch">1</span></td><td class="event">Contend for the Faith</td><td class="date">c. 65–80 AD</td></tr><tr class="season"><td colspan="4"><span class="snum">Season 18</span> Final Prophecy<span class="sera">c. 95–96 AD</span></td></tr><tr><td class="num">84</td><td class="book">Revelation <span class="ch">1–22</span></td><td class="event">John&#x27;s Revelation</td><td class="date">c. 95–96 AD</td></tr>
+      </tbody>
+    </table>
+    <div class="pagefoot">
+      <span>The Complete Biblical Timeline &middot; Reading Plan</span>
+      <span class="right">aibiblegospels.com &middot; 7 / 8</span>
+    </div>
+  </section>
+
+  <!-- Last page - Where to go next -->
+  <section class="page">
+    <p class="eyebrow-sm">Keep going</p>
+    <h1 class="section">Hear it in <span class="gold">order.</span></h1>
+    <p class="body">
+      Every reading in this plan is one episode of The Complete Biblical Timeline on the AI Bible Gospels
+      channel: the 1611 King James Bible with the Apocrypha, read verbatim, in this exact order, narrated by
+      Tommy Lee. No music, no edits, no gaps. A new book drops every day at 7 PM Eastern until all
+      81 are up.
+    </p>
+    <ul class="cta-list">
+      <li><span class="k">The series</span><p class="v">The Complete Biblical Timeline playlist, Season 1 to Season 18<br/><span class="url">youtube.com/@AIBIBLEGOSPELS</span></p></li>
+      <li><span class="k">Start with episode zero</span><p class="v">The Complete Story: why your Bible timeline is broken, and what this series does about it</p></li>
+      <li><span class="k">The community</span><p class="v">Questions, discussion, and the daily drop<br/><span class="url">t.me/aibiblegospels</span></p></li>
+      <li><span class="k">The rest of the work</span><p class="v">Faith Walk Live, Anointed, and everything else AI Bible Gospels is building<br/><span class="url">aibiblegospels.com</span></p></li>
+    </ul>
+    <div class="scripture-quote" style="margin-top:0.5in;">He which testifieth these things saith, Surely I come quickly. Amen. Even so, come, Lord Jesus.<span class="ref">Revelation 22:20</span></div>
+    <div class="pagefoot">
+      <span>The Complete Biblical Timeline &middot; Reading Plan</span>
+      <span class="right">aibiblegospels.com &middot; 8 / 8</span>
+    </div>
+  </section>
+</body>
+</html>

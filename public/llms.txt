@@ -7,6 +7,8 @@ AI Bible Gospels exists to serve the calling, not monetize it. Every tool shippe
 ## Core pages
 
 - [Home](https://aibiblegospels.com/): Positioning, flagship case study, services, contact
+- [The Complete Biblical Timeline](https://aibiblegospels.com/complete-biblical-timeline): The whole 1611 KJV with the Apocrypha restored, narrated in chronological order across 18 seasons on YouTube; free reading-plan PDF
+- [Anything Is Possible](https://aibiblegospels.com/anything-is-possible): The teaching behind Philippians 4:13, free study guide
 
 ## Flagship project
 
@@ -20,6 +22,7 @@ AI Bible Gospels exists to serve the calling, not monetize it. Every tool shippe
 
 - AI Bible Gospels: Faith-tech ministry and consulting brand. Founded by Thomas.
 - Faith Walk Live: Flagship deliverable. A supporter-built companion site for Minister Zay's Faith Walk.
+- The Complete Biblical Timeline: AI Bible Gospels' 84-episode chronological narration of the 1611 King James Bible including the Apocrypha, narrated by Tommy Lee, published daily on YouTube from October 2026.
 
 ## What we build
 

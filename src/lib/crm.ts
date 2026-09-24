@@ -40,6 +40,10 @@ export const MAGNET_FORM_IDS: Record<string, string | undefined> = {
   // reason as the form id above: it's a public capability, not a secret.
   "study-guide":
     process.env.BMB_CRM_FORM_ID_AIP ?? "McjOP48RRbUuVQb1yXjR",
+  // Complete Biblical Timeline reading plan. No shipped default: create the hosted form
+  // (autoTags ["complete-biblical-timeline","reading-plan"]) and set the env var. Until
+  // then the lead lands on the default form and only loses its tag.
+  timeline: process.env.BMB_CRM_FORM_ID_TIMELINE,
 };
 
 /** Resolve a magnet key to its hosted-form id, falling back to the default form. */

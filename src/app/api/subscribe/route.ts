@@ -9,6 +9,9 @@ const SITE = "https://aibiblegospels.com";
 const CHEATSHEET_URL = `${SITE}/deut28-cheatsheet.pdf`;
 const STUDY_GUIDE_URL = `${SITE}/anything-is-possible-study-guide.pdf`;
 const CAMPAIGN_URL = `${SITE}/anything-is-possible`;
+const TIMELINE_PDF_URL = `${SITE}/complete-biblical-timeline-reading-plan.pdf`;
+const TIMELINE_PAGE_URL = `${SITE}/complete-biblical-timeline`;
+const TIMELINE_PLAYLIST_URL = "https://www.youtube.com/playlist?list=PLXAp0-N3Ra9o";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -28,6 +31,11 @@ const MAGNETS = {
     subject: "The Mission of Christ — your study guide",
     html: () => studyGuideEmailHtml(),
     text: () => studyGuideEmailText(),
+  },
+  timeline: {
+    subject: "The Complete Biblical Timeline — your reading plan",
+    html: () => timelineEmailHtml(),
+    text: () => timelineEmailText(),
   },
 } as const;
 
@@ -318,6 +326,87 @@ Three more places to go from here:
 
 "I can do all things through Christ which strengtheneth me."
 — Philippians 4:13
+
+AI Bible Gospels · aibiblegospels.com`;
+}
+
+// The Complete Biblical Timeline reading plan. The PDF is generated from the same series
+// file the video pipeline runs on (scripts/timeline-series.json), so the order people
+// download is the order they watch.
+function timelineEmailHtml(): string {
+  return `<!DOCTYPE html>
+<html>
+<body style="margin:0;padding:0;background:#0A0A2A;font-family:Georgia,'Times New Roman',serif;color:#F5DEB3;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0A0A2A;padding:40px 20px;">
+    <tr><td align="center">
+      <table role="presentation" width="540" cellpadding="0" cellspacing="0" style="max-width:540px;width:100%;">
+        <tr><td style="padding:0 0 24px;">
+          <p style="margin:0;font-family:Arial,sans-serif;letter-spacing:0.3em;font-size:11px;text-transform:uppercase;color:#D4A04A;">
+            AI Bible Gospels
+          </p>
+        </td></tr>
+        <tr><td style="padding:0 0 20px;">
+          <h1 style="margin:0;color:#E8C46B;font-size:32px;line-height:1.15;font-weight:700;">
+            Here's the whole story, in order.
+          </h1>
+        </td></tr>
+        <tr><td style="padding:0 0 16px;font-size:16px;line-height:1.65;color:#F5DEB3;">
+          You asked for The Complete Biblical Timeline reading plan. Here it is.
+        </td></tr>
+        <tr><td style="padding:0 0 28px;font-size:16px;line-height:1.65;color:#F5DEB3;">
+          Eighty-one books of the 1611 King James Bible, Apocrypha restored, laid out in the order the events actually happened. Eighteen seasons, Creation to Revelation. Print it. Read it with your family.
+        </td></tr>
+        <tr><td align="left" style="padding:8px 0 32px;">
+          <a href="${TIMELINE_PDF_URL}" style="display:inline-block;background:#E8C46B;color:#0A0A2A;text-decoration:none;font-weight:700;font-family:Arial,sans-serif;font-size:14px;letter-spacing:0.05em;padding:14px 28px;border-radius:999px;">
+            Open the reading plan (PDF) &rarr;
+          </a>
+        </td></tr>
+        <tr><td style="padding:0 0 16px;font-size:15px;line-height:1.65;color:#F5DEB3;">
+          Every reading in the plan is also one episode, narrated word for word:
+        </td></tr>
+        <tr><td style="padding:0 0 28px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+            <tr><td style="padding:8px 0;border-top:1px solid #1a1a4a;font-size:14px;line-height:1.5;">
+              <span style="color:#D4A04A;font-family:Arial,sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;">The series</span><br/>
+              <a href="${TIMELINE_PLAYLIST_URL}" style="color:#E8C46B;text-decoration:none;">The Complete Biblical Timeline &mdash; a new book every day at 7 PM Eastern</a>
+            </td></tr>
+            <tr><td style="padding:8px 0;border-top:1px solid #1a1a4a;font-size:14px;line-height:1.5;">
+              <span style="color:#D4A04A;font-family:Arial,sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;">Start here</span><br/>
+              <a href="${TIMELINE_PAGE_URL}" style="color:#E8C46B;text-decoration:none;">Episode zero: why your Bible timeline is broken</a>
+            </td></tr>
+            <tr><td style="padding:8px 0;border-top:1px solid #1a1a4a;border-bottom:1px solid #1a1a4a;font-size:14px;line-height:1.5;">
+              <span style="color:#D4A04A;font-family:Arial,sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;">Telegram</span><br/>
+              <a href="https://t.me/aibiblegospels" style="color:#E8C46B;text-decoration:none;">The community and the daily drop</a>
+            </td></tr>
+          </table>
+        </td></tr>
+        <tr><td style="padding:20px 0 0;border-top:1px solid #1a1a4a;font-family:Arial,sans-serif;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#8B5E3C;">
+          AI Bible Gospels &middot; aibiblegospels.com
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`;
+}
+
+function timelineEmailText(): string {
+  return `Here's the whole story, in order.
+
+You asked for The Complete Biblical Timeline reading plan. Here it is.
+
+Eighty-one books of the 1611 King James Bible, Apocrypha restored, laid out in the order the events actually happened. Eighteen seasons, Creation to Revelation. Print it. Read it with your family.
+
+Open the reading plan (PDF): ${TIMELINE_PDF_URL}
+
+Every reading in the plan is also one episode, narrated word for word:
+
+- The series — The Complete Biblical Timeline, a new book every day at 7 PM Eastern:
+  ${TIMELINE_PLAYLIST_URL}
+- Start here — episode zero, why your Bible timeline is broken:
+  ${TIMELINE_PAGE_URL}
+- Telegram — the community and the daily drop:
+  https://t.me/aibiblegospels
 
 AI Bible Gospels · aibiblegospels.com`;
 }

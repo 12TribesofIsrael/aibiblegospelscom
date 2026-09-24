@@ -1,0 +1,1124 @@
+{
+ "series": "The Complete Biblical Timeline",
+ "subtitle": "KJV 1611 with Apocrypha, read in the order events happened, narrated by Tommy Lee",
+ "source": "data/timeline/seamlessbiblicaltimeline.md (18 seasons, 81 books); event labels from data/timeline/complete_biblical_timeline_events.md",
+ "narrator": "Tommy Lee",
+ "seasons": [
+  {
+   "n": 1,
+   "name": "Creation & Early World",
+   "era": "~4000–2000 BC"
+  },
+  {
+   "n": 2,
+   "name": "Patriarchs",
+   "era": "~2000–1800 BC"
+  },
+  {
+   "n": 3,
+   "name": "Egypt & Exodus",
+   "era": "~1800–1400 BC"
+  },
+  {
+   "n": 4,
+   "name": "Conquest & Judges",
+   "era": "~1400–1050 BC"
+  },
+  {
+   "n": 5,
+   "name": "Kingdom of Israel",
+   "era": "~1050–930 BC"
+  },
+  {
+   "n": 6,
+   "name": "Divided Kingdom",
+   "era": "~930–586 BC"
+  },
+  {
+   "n": 7,
+   "name": "Prophets During the Kingdoms",
+   "era": "~830–586 BC"
+  },
+  {
+   "n": 8,
+   "name": "Babylonian Exile",
+   "era": "~586 BC"
+  },
+  {
+   "n": 9,
+   "name": "Exile Writings",
+   "era": "~722–538 BC"
+  },
+  {
+   "n": 10,
+   "name": "Return from Exile",
+   "era": "~538–400 BC"
+  },
+  {
+   "n": 11,
+   "name": "Persian Period",
+   "era": "~483–400 BC"
+  },
+  {
+   "n": 12,
+   "name": "Wisdom Literature",
+   "era": "~970–100 BC"
+  },
+  {
+   "n": 13,
+   "name": "Greek Oppression & Maccabees",
+   "era": "~175–135 BC"
+  },
+  {
+   "n": 14,
+   "name": "Final Old Testament Prophet",
+   "era": "~430 BC"
+  },
+  {
+   "n": 15,
+   "name": "Bridge to the New Testament",
+   "era": "~70–135 AD"
+  },
+  {
+   "n": 16,
+   "name": "The Messiah Era",
+   "era": "~5 BC–30 AD"
+  },
+  {
+   "n": 17,
+   "name": "Early Church",
+   "era": "~30–100 AD"
+  },
+  {
+   "n": 18,
+   "name": "Final Prophecy",
+   "era": "~95–96 AD"
+  }
+ ],
+ "episodes": [
+  {
+   "id": "e01",
+   "season": 1,
+   "book": "Genesis",
+   "json_book": "Genesis",
+   "chapters": [
+    1,
+    11
+   ],
+   "event": "Creation, the Flood, Babel",
+   "date": "~4000 BC"
+  },
+  {
+   "id": "e02",
+   "season": 1,
+   "book": "Job",
+   "json_book": "Job",
+   "chapters": [
+    1,
+    42
+   ],
+   "event": "Job's Trials",
+   "date": "~2000–1800 BC"
+  },
+  {
+   "id": "e03",
+   "season": 2,
+   "book": "Genesis",
+   "json_book": "Genesis",
+   "chapters": [
+    12,
+    50
+   ],
+   "event": "Patriarchs: Abraham, Isaac, Jacob",
+   "date": "~2000–1800 BC"
+  },
+  {
+   "id": "e04",
+   "season": 3,
+   "book": "Exodus",
+   "json_book": "Exodus",
+   "chapters": [
+    1,
+    40
+   ],
+   "event": "The Exodus",
+   "date": "~1446 BC"
+  },
+  {
+   "id": "e05",
+   "season": 3,
+   "book": "Leviticus",
+   "json_book": "Leviticus",
+   "chapters": [
+    1,
+    27
+   ],
+   "event": "The Law Given at Sinai",
+   "date": "~1445 BC"
+  },
+  {
+   "id": "e06",
+   "season": 3,
+   "book": "Numbers",
+   "json_book": "Numbers",
+   "chapters": [
+    1,
+    36
+   ],
+   "event": "Forty Years in the Wilderness",
+   "date": "~1445–1406 BC"
+  },
+  {
+   "id": "e07",
+   "season": 3,
+   "book": "Deuteronomy",
+   "json_book": "Deuteronomy",
+   "chapters": [
+    1,
+    34
+   ],
+   "event": "Moses' Final Words",
+   "date": "~1406 BC"
+  },
+  {
+   "id": "e08",
+   "season": 4,
+   "book": "Joshua",
+   "json_book": "Joshua",
+   "chapters": [
+    1,
+    24
+   ],
+   "event": "Israel Enters Canaan",
+   "date": "~1400 BC"
+  },
+  {
+   "id": "e09",
+   "season": 4,
+   "book": "Judges",
+   "json_book": "Judges",
+   "chapters": [
+    1,
+    21
+   ],
+   "event": "Judges Rule Israel",
+   "date": "~1380–1050 BC"
+  },
+  {
+   "id": "e10",
+   "season": 4,
+   "book": "Ruth",
+   "json_book": "Ruth",
+   "chapters": [
+    1,
+    4
+   ],
+   "event": "Ruth's Story",
+   "date": "~1100 BC"
+  },
+  {
+   "id": "e11",
+   "season": 5,
+   "book": "1 Samuel",
+   "json_book": "1 Samuel",
+   "chapters": [
+    1,
+    31
+   ],
+   "event": "Samuel and Saul",
+   "date": "~1100–1010 BC"
+  },
+  {
+   "id": "e12",
+   "season": 5,
+   "book": "2 Samuel",
+   "json_book": "2 Samuel",
+   "chapters": [
+    1,
+    24
+   ],
+   "event": "David Becomes King",
+   "date": "~1010–970 BC"
+  },
+  {
+   "id": "e13",
+   "season": 5,
+   "book": "Psalms",
+   "json_book": "Psalms",
+   "chapters": [
+    1,
+    150
+   ],
+   "event": "The Songs of David",
+   "date": "~1010–970 BC"
+  },
+  {
+   "id": "e14",
+   "season": 5,
+   "book": "1 Chronicles",
+   "json_book": "1 Chronicles",
+   "chapters": [
+    1,
+    29
+   ],
+   "event": "David's Full Record",
+   "date": "~1010–970 BC"
+  },
+  {
+   "id": "e15",
+   "season": 5,
+   "book": "1 Kings",
+   "json_book": "1 Kings",
+   "chapters": [
+    1,
+    11
+   ],
+   "event": "Solomon's Reign",
+   "date": "~970–930 BC"
+  },
+  {
+   "id": "e16",
+   "season": 5,
+   "book": "2 Chronicles",
+   "json_book": "2 Chronicles",
+   "chapters": [
+    1,
+    9
+   ],
+   "event": "Solomon Builds the Temple",
+   "date": "~970–930 BC"
+  },
+  {
+   "id": "e17",
+   "season": 6,
+   "book": "1 Kings",
+   "json_book": "1 Kings",
+   "chapters": [
+    12,
+    22
+   ],
+   "event": "Kingdom Divides; Elijah",
+   "date": "~930–850 BC"
+  },
+  {
+   "id": "e18",
+   "season": 6,
+   "book": "2 Kings",
+   "json_book": "2 Kings",
+   "chapters": [
+    1,
+    25
+   ],
+   "event": "Elisha; Fall of Israel and Judah",
+   "date": "~850–586 BC"
+  },
+  {
+   "id": "e19",
+   "season": 6,
+   "book": "2 Chronicles",
+   "json_book": "2 Chronicles",
+   "chapters": [
+    10,
+    36
+   ],
+   "event": "Kings of Judah",
+   "date": "~930–586 BC"
+  },
+  {
+   "id": "e20",
+   "season": 7,
+   "book": "Joel",
+   "json_book": "Joel",
+   "chapters": [
+    1,
+    3
+   ],
+   "event": "Joel's Prophecy",
+   "date": "~830–800 BC"
+  },
+  {
+   "id": "e21",
+   "season": 7,
+   "book": "Jonah",
+   "json_book": "Jonah",
+   "chapters": [
+    1,
+    4
+   ],
+   "event": "Jonah Preaches Nineveh",
+   "date": "~760 BC"
+  },
+  {
+   "id": "e22",
+   "season": 7,
+   "book": "Amos",
+   "json_book": "Amos",
+   "chapters": [
+    1,
+    9
+   ],
+   "event": "Amos' Prophecy",
+   "date": "~760–750 BC"
+  },
+  {
+   "id": "e23",
+   "season": 7,
+   "book": "Hosea",
+   "json_book": "Hosea",
+   "chapters": [
+    1,
+    14
+   ],
+   "event": "Fall of the Northern Kingdom",
+   "date": "~750–715 BC"
+  },
+  {
+   "id": "e24",
+   "season": 7,
+   "book": "Isaiah",
+   "json_book": "Isaiah",
+   "chapters": [
+    1,
+    66
+   ],
+   "event": "Isaiah's Ministry",
+   "date": "~740–680 BC"
+  },
+  {
+   "id": "e25",
+   "season": 7,
+   "book": "Micah",
+   "json_book": "Micah",
+   "chapters": [
+    1,
+    7
+   ],
+   "event": "Micah's Prophecy",
+   "date": "~740–687 BC"
+  },
+  {
+   "id": "e26",
+   "season": 7,
+   "book": "Nahum",
+   "json_book": "Nahum",
+   "chapters": [
+    1,
+    3
+   ],
+   "event": "Nahum Prophesies Nineveh's Fall",
+   "date": "~663–612 BC"
+  },
+  {
+   "id": "e27",
+   "season": 7,
+   "book": "Zephaniah",
+   "json_book": "Zephaniah",
+   "chapters": [
+    1,
+    3
+   ],
+   "event": "The Day of the LORD",
+   "date": "~640–630 BC"
+  },
+  {
+   "id": "e28",
+   "season": 7,
+   "book": "Habakkuk",
+   "json_book": "Habakkuk",
+   "chapters": [
+    1,
+    3
+   ],
+   "event": "Habakkuk's Questions",
+   "date": "~609–605 BC"
+  },
+  {
+   "id": "e29",
+   "season": 7,
+   "book": "Obadiah",
+   "json_book": "Obadiah",
+   "chapters": [
+    1,
+    1
+   ],
+   "event": "Obadiah's Prophecy against Edom",
+   "date": "~586 BC"
+  },
+  {
+   "id": "e30",
+   "season": 7,
+   "book": "Jeremiah",
+   "json_book": "Jeremiah",
+   "chapters": [
+    1,
+    52
+   ],
+   "event": "Fall of Judah",
+   "date": "~627–586 BC"
+  },
+  {
+   "id": "e31",
+   "season": 8,
+   "book": "Lamentations",
+   "json_book": "Lamentations",
+   "chapters": [
+    1,
+    5
+   ],
+   "event": "Jerusalem Mourns",
+   "date": "~586 BC"
+  },
+  {
+   "id": "e32",
+   "season": 8,
+   "book": "Ezekiel",
+   "json_book": "Ezekiel",
+   "chapters": [
+    1,
+    48
+   ],
+   "event": "Ezekiel's Ministry",
+   "date": "~593–570 BC"
+  },
+  {
+   "id": "e33",
+   "season": 8,
+   "book": "Daniel",
+   "json_book": "Daniel",
+   "chapters": [
+    1,
+    12
+   ],
+   "event": "Daniel in Babylon",
+   "date": "~605–530 BC"
+  },
+  {
+   "id": "e34",
+   "season": 8,
+   "book": "Prayer of Azariah & Song of the Three Holy Children",
+   "short": "Song of the Three",
+   "json_book": "Prayer of Azariah",
+   "chapters": [
+    1,
+    1
+   ],
+   "event": "In the Fiery Furnace",
+   "date": "~600 BC"
+  },
+  {
+   "id": "e35",
+   "season": 8,
+   "book": "Susanna",
+   "json_book": "Susanna",
+   "chapters": [
+    1,
+    1
+   ],
+   "event": "Daniel Judges the Elders",
+   "date": "~600 BC"
+  },
+  {
+   "id": "e36",
+   "season": 8,
+   "book": "Bel and the Dragon",
+   "json_book": "Bel and the Dragon",
+   "chapters": [
+    1,
+    1
+   ],
+   "event": "Daniel Exposes the Idols",
+   "date": "~540 BC"
+  },
+  {
+   "id": "e37",
+   "season": 9,
+   "book": "Tobit",
+   "json_book": "Tobit",
+   "chapters": [
+    1,
+    14
+   ],
+   "event": "Tobit's Story",
+   "date": "~722–400 BC"
+  },
+  {
+   "id": "e38",
+   "season": 9,
+   "book": "Baruch",
+   "json_book": "Baruch",
+   "chapters": [
+    1,
+    5
+   ],
+   "event": "Written in Exile",
+   "date": "~586 BC",
+   "_note": "Baruch 1-5; the Epistle of Jeremy (Baruch 6) is its own episode e39"
+  },
+  {
+   "id": "e39",
+   "season": 9,
+   "book": "Letter of Jeremiah",
+   "json_book": "Letter of Jeremiah",
+   "chapters": [
+    6,
+    6
+   ],
+   "event": "Companion to Baruch",
+   "date": "~586 BC"
+  },
+  {
+   "id": "e40",
+   "season": 10,
+   "book": "Ezra",
+   "json_book": "Ezra",
+   "chapters": [
+    1,
+    10
+   ],
+   "event": "Return from Exile",
+   "date": "~538 BC"
+  },
+  {
+   "id": "e41",
+   "season": 10,
+   "book": "Nehemiah",
+   "json_book": "Nehemiah",
+   "chapters": [
+    1,
+    13
+   ],
+   "event": "Rebuilding of Jerusalem",
+   "date": "~445–430 BC"
+  },
+  {
+   "id": "e42",
+   "season": 10,
+   "book": "Haggai",
+   "json_book": "Haggai",
+   "chapters": [
+    1,
+    2
+   ],
+   "event": "Rebuild the Temple",
+   "date": "~520 BC"
+  },
+  {
+   "id": "e43",
+   "season": 10,
+   "book": "Zechariah",
+   "json_book": "Zechariah",
+   "chapters": [
+    1,
+    14
+   ],
+   "event": "Visions of the Coming King",
+   "date": "~520–480 BC"
+  },
+  {
+   "id": "e44",
+   "season": 10,
+   "book": "1 Esdras",
+   "json_book": "1 Esdras",
+   "chapters": [
+    1,
+    9
+   ],
+   "event": "1 Esdras Events",
+   "date": "~538–400 BC"
+  },
+  {
+   "id": "e45",
+   "season": 10,
+   "book": "Prayer of Manasseh",
+   "json_book": "Prayer of Manassah",
+   "chapters": [
+    1,
+    1
+   ],
+   "event": "A King Repents",
+   "date": "~650 BC"
+  },
+  {
+   "id": "e46",
+   "season": 11,
+   "book": "Esther",
+   "json_book": "Esther",
+   "chapters": [
+    1,
+    10
+   ],
+   "event": "Esther Saves Israel",
+   "date": "~483–473 BC"
+  },
+  {
+   "id": "e47",
+   "season": 11,
+   "book": "Judith",
+   "json_book": "Judith",
+   "chapters": [
+    1,
+    16
+   ],
+   "event": "Judith's Heroism",
+   "date": "~600–100 BC"
+  },
+  {
+   "id": "e48",
+   "season": 11,
+   "book": "Esther (Greek)",
+   "short": "Greek Esther",
+   "json_book": "Esther (Greek)",
+   "chapters": [
+    10,
+    16
+   ],
+   "event": "The Greek Esther with the Additions",
+   "date": "~483–473 BC",
+   "_note": "The rest of the chapters of the book of Esther (10:4-16:24), sourced from kingjamesbibleonline.org because the PDF's 'Esther (Greek)' pages reprint the Hebrew Esther"
+  },
+  {
+   "id": "e49",
+   "season": 12,
+   "book": "Proverbs",
+   "json_book": "Proverbs",
+   "chapters": [
+    1,
+    31
+   ],
+   "event": "Solomon's Wisdom",
+   "date": "~970–930 BC"
+  },
+  {
+   "id": "e50",
+   "season": 12,
+   "book": "Ecclesiastes",
+   "json_book": "Ecclesiastes",
+   "chapters": [
+    1,
+    12
+   ],
+   "event": "Vanity of Vanities",
+   "date": "~970–930 BC"
+  },
+  {
+   "id": "e51",
+   "season": 12,
+   "book": "Song of Solomon",
+   "json_book": "Song of Songs",
+   "chapters": [
+    1,
+    8
+   ],
+   "event": "The Song of Songs",
+   "date": "~970–930 BC"
+  },
+  {
+   "id": "e52",
+   "season": 12,
+   "book": "Ecclesiasticus (Sirach)",
+   "short": "Sirach",
+   "json_book": "Sirach",
+   "chapters": [
+    1,
+    51
+   ],
+   "event": "Sirach's Wisdom",
+   "date": "~200–180 BC"
+  },
+  {
+   "id": "e53",
+   "season": 12,
+   "book": "Wisdom of Solomon",
+   "json_book": "Wisdom",
+   "chapters": [
+    1,
+    19
+   ],
+   "event": "Wisdom of Solomon",
+   "date": "~400–100 BC"
+  },
+  {
+   "id": "e54",
+   "season": 13,
+   "book": "1 Maccabees",
+   "json_book": "1 Maccabees",
+   "chapters": [
+    1,
+    16
+   ],
+   "event": "The Revolt Begins",
+   "date": "~175–134 BC"
+  },
+  {
+   "id": "e55",
+   "season": 13,
+   "book": "2 Maccabees",
+   "json_book": "2 Maccabees",
+   "chapters": [
+    1,
+    15
+   ],
+   "event": "Martyrdom under Greece",
+   "date": "~175–160 BC"
+  },
+  {
+   "id": "e56",
+   "season": 14,
+   "book": "Malachi",
+   "json_book": "Malachi",
+   "chapters": [
+    1,
+    4
+   ],
+   "event": "Malachi's Final Prophecy",
+   "date": "~430 BC"
+  },
+  {
+   "id": "e57",
+   "season": 15,
+   "book": "2 Esdras",
+   "json_book": "2 Esdras",
+   "chapters": [
+    1,
+    16
+   ],
+   "event": "Visions of Ezra",
+   "date": "~70–135 AD"
+  },
+  {
+   "id": "e58",
+   "season": 16,
+   "book": "Matthew",
+   "json_book": "Matthew",
+   "chapters": [
+    1,
+    28
+   ],
+   "event": "Birth and Ministry of Christ",
+   "date": "~5 BC–30 AD"
+  },
+  {
+   "id": "e59",
+   "season": 16,
+   "book": "Mark",
+   "json_book": "Mark",
+   "chapters": [
+    1,
+    16
+   ],
+   "event": "The Servant King",
+   "date": "~27–30 AD"
+  },
+  {
+   "id": "e60",
+   "season": 16,
+   "book": "Luke",
+   "json_book": "Luke",
+   "chapters": [
+    1,
+    24
+   ],
+   "event": "The Son of Man",
+   "date": "~5 BC–30 AD"
+  },
+  {
+   "id": "e61",
+   "season": 16,
+   "book": "John",
+   "json_book": "John",
+   "chapters": [
+    1,
+    21
+   ],
+   "event": "The Word Made Flesh",
+   "date": "~27–30 AD"
+  },
+  {
+   "id": "e62",
+   "season": 17,
+   "book": "Acts",
+   "json_book": "Acts",
+   "chapters": [
+    1,
+    28
+   ],
+   "event": "The Early Church",
+   "date": "~33–62 AD"
+  },
+  {
+   "id": "e63",
+   "season": 17,
+   "book": "James",
+   "json_book": "James",
+   "chapters": [
+    1,
+    5
+   ],
+   "event": "Faith and Works",
+   "date": "~45–50 AD"
+  },
+  {
+   "id": "e64",
+   "season": 17,
+   "book": "Galatians",
+   "json_book": "Galatians",
+   "chapters": [
+    1,
+    6
+   ],
+   "event": "Paul's Letters",
+   "date": "~49 AD"
+  },
+  {
+   "id": "e65",
+   "season": 17,
+   "book": "1 Thessalonians",
+   "json_book": "1 Thessalonians",
+   "chapters": [
+    1,
+    5
+   ],
+   "event": "Paul's Letters",
+   "date": "~50–51 AD"
+  },
+  {
+   "id": "e66",
+   "season": 17,
+   "book": "2 Thessalonians",
+   "json_book": "2 Thessalonians",
+   "chapters": [
+    1,
+    3
+   ],
+   "event": "Paul's Letters",
+   "date": "~51–52 AD"
+  },
+  {
+   "id": "e67",
+   "season": 17,
+   "book": "1 Corinthians",
+   "json_book": "1 Corinthians",
+   "chapters": [
+    1,
+    16
+   ],
+   "event": "Paul's Letters",
+   "date": "~55 AD"
+  },
+  {
+   "id": "e68",
+   "season": 17,
+   "book": "2 Corinthians",
+   "json_book": "2 Corinthians",
+   "chapters": [
+    1,
+    13
+   ],
+   "event": "Paul's Letters",
+   "date": "~55–56 AD"
+  },
+  {
+   "id": "e69",
+   "season": 17,
+   "book": "Romans",
+   "json_book": "Romans",
+   "chapters": [
+    1,
+    16
+   ],
+   "event": "Paul's Letters",
+   "date": "~57 AD"
+  },
+  {
+   "id": "e70",
+   "season": 17,
+   "book": "Ephesians",
+   "json_book": "Ephesians",
+   "chapters": [
+    1,
+    6
+   ],
+   "event": "Paul's Prison Letters",
+   "date": "~60–62 AD"
+  },
+  {
+   "id": "e71",
+   "season": 17,
+   "book": "Philippians",
+   "json_book": "Philippians",
+   "chapters": [
+    1,
+    4
+   ],
+   "event": "Paul's Prison Letters",
+   "date": "~60–62 AD"
+  },
+  {
+   "id": "e72",
+   "season": 17,
+   "book": "Colossians",
+   "json_book": "Colossians",
+   "chapters": [
+    1,
+    4
+   ],
+   "event": "Paul's Prison Letters",
+   "date": "~60–62 AD"
+  },
+  {
+   "id": "e73",
+   "season": 17,
+   "book": "Philemon",
+   "json_book": "Philemon",
+   "chapters": [
+    1,
+    1
+   ],
+   "event": "Paul's Prison Letters",
+   "date": "~60–62 AD"
+  },
+  {
+   "id": "e74",
+   "season": 17,
+   "book": "1 Timothy",
+   "json_book": "1 Timothy",
+   "chapters": [
+    1,
+    6
+   ],
+   "event": "Paul's Pastoral Letters",
+   "date": "~63–65 AD"
+  },
+  {
+   "id": "e75",
+   "season": 17,
+   "book": "Titus",
+   "json_book": "Titus",
+   "chapters": [
+    1,
+    3
+   ],
+   "event": "Paul's Pastoral Letters",
+   "date": "~63–65 AD"
+  },
+  {
+   "id": "e76",
+   "season": 17,
+   "book": "2 Timothy",
+   "json_book": "2 Timothy",
+   "chapters": [
+    1,
+    4
+   ],
+   "event": "Paul's Last Letter",
+   "date": "~66–67 AD"
+  },
+  {
+   "id": "e77",
+   "season": 17,
+   "book": "Hebrews",
+   "json_book": "Hebrews",
+   "chapters": [
+    1,
+    13
+   ],
+   "event": "General Epistles",
+   "date": "~64–70 AD"
+  },
+  {
+   "id": "e78",
+   "season": 17,
+   "book": "1 Peter",
+   "json_book": "1 Peter",
+   "chapters": [
+    1,
+    5
+   ],
+   "event": "General Epistles",
+   "date": "~64–68 AD"
+  },
+  {
+   "id": "e79",
+   "season": 17,
+   "book": "2 Peter",
+   "json_book": "2 Peter",
+   "chapters": [
+    1,
+    3
+   ],
+   "event": "General Epistles",
+   "date": "~66–68 AD"
+  },
+  {
+   "id": "e80",
+   "season": 17,
+   "book": "1 John",
+   "json_book": "1 John",
+   "chapters": [
+    1,
+    5
+   ],
+   "event": "General Epistles",
+   "date": "~85–95 AD"
+  },
+  {
+   "id": "e81",
+   "season": 17,
+   "book": "2 John",
+   "json_book": "2 John",
+   "chapters": [
+    1,
+    1
+   ],
+   "event": "General Epistles",
+   "date": "~85–95 AD"
+  },
+  {
+   "id": "e82",
+   "season": 17,
+   "book": "3 John",
+   "json_book": "3 John",
+   "chapters": [
+    1,
+    1
+   ],
+   "event": "General Epistles",
+   "date": "~85–95 AD"
+  },
+  {
+   "id": "e83",
+   "season": 17,
+   "book": "Jude",
+   "json_book": "Jude",
+   "chapters": [
+    1,
+    1
+   ],
+   "event": "Contend for the Faith",
+   "date": "~65–80 AD"
+  },
+  {
+   "id": "e84",
+   "season": 18,
+   "book": "Revelation",
+   "json_book": "Revelation",
+   "chapters": [
+    1,
+    22
+   ],
+   "event": "John's Revelation",
+   "date": "~95–96 AD"
+  }
+ ],
+ "quotes": {
+  "opening": {
+   "text": "In the beginning God created the heaven and the earth.",
+   "ref": "Genesis 1:1"
+  },
+  "closing": {
+   "text": "He which testifieth these things saith, Surely I come quickly. Amen. Even so, come, Lord Jesus.",
+   "ref": "Revelation 22:20"
+  }
+ },
+ "_quotes_note": "Verbatim from the 1611 KJV PDF via biblerevamp/data/kjv_verses.json; never typed from memory."
+}
