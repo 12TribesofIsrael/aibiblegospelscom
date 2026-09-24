@@ -20,7 +20,7 @@ const BOOKS = new Set(EPISODES.map((e) => e.book)).size;
 const CHAPTERS = EPISODES.reduce((n, e) => n + (e.chapters[1] - e.chapters[0] + 1), 0);
 
 export const metadata: Metadata = {
-  title: "The Complete Biblical Timeline — free reading plan | AI Bible Gospels",
+  title: "The Complete Biblical Timeline — free reading plan",
   description:
     "All 81 books of the 1611 King James Bible with the Apocrypha restored, in the order the events actually happened. Eighteen seasons, Creation to Revelation. Get the free reading plan, then hear every book narrated word for word.",
   alternates: { canonical: "https://aibiblegospels.com/complete-biblical-timeline" },
