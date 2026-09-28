@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import TimelineForm from "@/components/TimelineForm";
+import HeroVideo from "@/components/HeroVideo";
 import series from "../../../scripts/timeline-series.json";
 
 // The page and the PDF read the same file the video pipeline runs on, so the
@@ -48,8 +49,9 @@ export default function CompleteBiblicalTimelinePage() {
   return (
     <main className="bg-brand-black text-brand-cloud">
       {/* ── HERO ── */}
-      <section className="border-b border-brand-border">
-        <div className="max-w-5xl mx-auto px-4 pt-20 pb-16 text-center">
+      <section className="relative overflow-hidden border-b border-brand-border min-h-[640px] flex items-center">
+        <HeroVideo />
+        <div className="relative z-[2] max-w-5xl mx-auto px-4 pt-20 pb-16 text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-brand-amber mb-4">
             AI Bible Gospels · a series in {SEASONS.length} seasons
           </p>
