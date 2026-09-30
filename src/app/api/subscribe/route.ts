@@ -11,6 +11,9 @@ const STUDY_GUIDE_URL = `${SITE}/anything-is-possible-study-guide.pdf`;
 const CAMPAIGN_URL = `${SITE}/anything-is-possible`;
 const TIMELINE_PDF_URL = `${SITE}/complete-biblical-timeline-reading-plan.pdf`;
 const TIMELINE_PAGE_URL = `${SITE}/complete-biblical-timeline`;
+// Public-domain KJV + Apocrypha PDF (DaVince Tools edition, placed in the public domain by its
+// publisher) — the same file biblerevamp narrates from, so the text they read is the text they hear.
+const KJV_PDF_URL = `${SITE}/king-james-bible-with-apocrypha.pdf`;
 const TIMELINE_PLAYLIST_URL = "https://www.youtube.com/playlist?list=PLXAp0-N3Ra9o";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -33,7 +36,7 @@ const MAGNETS = {
     text: () => studyGuideEmailText(),
   },
   timeline: {
-    subject: "The Complete Biblical Timeline — your reading plan",
+    subject: "The Complete Biblical Timeline — your reading plan and the Bible to read it from",
     html: () => timelineEmailHtml(),
     text: () => timelineEmailText(),
   },
@@ -351,15 +354,23 @@ function timelineEmailHtml(): string {
           </h1>
         </td></tr>
         <tr><td style="padding:0 0 16px;font-size:16px;line-height:1.65;color:#F5DEB3;">
-          You asked for The Complete Biblical Timeline reading plan. Here it is.
+          You asked for The Complete Biblical Timeline reading plan. Here it is, and with it the whole King James Bible with the Apocrypha, so you have the text itself to read from.
         </td></tr>
         <tr><td style="padding:0 0 28px;font-size:16px;line-height:1.65;color:#F5DEB3;">
           Eighty-one books of the 1611 King James Bible, Apocrypha restored, laid out in the order the events actually happened. Eighteen seasons, Creation to Revelation. Print it. Read it with your family.
         </td></tr>
-        <tr><td align="left" style="padding:8px 0 32px;">
+        <tr><td align="left" style="padding:8px 0 12px;">
           <a href="${TIMELINE_PDF_URL}" style="display:inline-block;background:#E8C46B;color:#0A0A2A;text-decoration:none;font-weight:700;font-family:Arial,sans-serif;font-size:14px;letter-spacing:0.05em;padding:14px 28px;border-radius:999px;">
             Open the reading plan (PDF) &rarr;
           </a>
+        </td></tr>
+        <tr><td align="left" style="padding:0 0 16px;">
+          <a href="${KJV_PDF_URL}" style="display:inline-block;background:transparent;color:#E8C46B;text-decoration:none;font-weight:700;font-family:Arial,sans-serif;font-size:14px;letter-spacing:0.05em;padding:13px 27px;border-radius:999px;border:1px solid #E8C46B;">
+            Open the King James Bible with Apocrypha (PDF) &rarr;
+          </a>
+        </td></tr>
+        <tr><td style="padding:0 0 28px;font-size:14px;line-height:1.6;color:#F5DEB3;">
+          The plan tells you what to read next; the Bible is the text itself, with every book bookmarked so you can jump straight to the day&rsquo;s reading. It is the same text the series narrates, so you can read along together, word for word.
         </td></tr>
         <tr><td style="padding:0 0 16px;font-size:15px;line-height:1.65;color:#F5DEB3;">
           Every reading in the plan is also one episode, narrated word for word:
@@ -393,11 +404,14 @@ function timelineEmailHtml(): string {
 function timelineEmailText(): string {
   return `Here's the whole story, in order.
 
-You asked for The Complete Biblical Timeline reading plan. Here it is.
+You asked for The Complete Biblical Timeline reading plan. Here it is, and with it the whole King James Bible with the Apocrypha, so you have the text itself to read from.
 
 Eighty-one books of the 1611 King James Bible, Apocrypha restored, laid out in the order the events actually happened. Eighteen seasons, Creation to Revelation. Print it. Read it with your family.
 
 Open the reading plan (PDF): ${TIMELINE_PDF_URL}
+Open the King James Bible with Apocrypha (PDF): ${KJV_PDF_URL}
+
+The plan tells you what to read next; the Bible is the text itself, with every book bookmarked so you can jump straight to the day's reading. It is the same text the series narrates, so you can read along together, word for word.
 
 Every reading in the plan is also one episode, narrated word for word:
 

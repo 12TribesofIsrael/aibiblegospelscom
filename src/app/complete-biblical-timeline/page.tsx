@@ -67,7 +67,7 @@ export default function CompleteBiblicalTimelinePage() {
               href="#plan"
               className="rounded-full bg-brand-gold text-brand-black font-semibold px-6 py-3 hover:bg-brand-amber transition"
             >
-              Get the free reading plan
+              Get the reading plan + the Bible
             </a>
             <a
               href={PLAYLIST}

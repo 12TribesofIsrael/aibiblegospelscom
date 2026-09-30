@@ -7,7 +7,7 @@ AI Bible Gospels exists to serve the calling, not monetize it. Every tool shippe
 ## Core pages
 
 - [Home](https://aibiblegospels.com/): Positioning, flagship case study, services, contact
-- [The Complete Biblical Timeline](https://aibiblegospels.com/complete-biblical-timeline): The whole 1611 KJV with the Apocrypha restored, narrated in chronological order across 18 seasons on YouTube; free reading-plan PDF
+- [The Complete Biblical Timeline](https://aibiblegospels.com/complete-biblical-timeline): The whole 1611 KJV with the Apocrypha restored, narrated in chronological order across 18 seasons on YouTube; free reading-plan PDF plus the full public-domain King James Bible with the Apocrypha as a PDF
 - [Anything Is Possible](https://aibiblegospels.com/anything-is-possible): The teaching behind Philippians 4:13, free study guide
 
 ## Flagship project

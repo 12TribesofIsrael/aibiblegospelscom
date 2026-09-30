@@ -191,7 +191,8 @@ def main():
       <span class="em">How to read it.</span> Take the readings in order, one a day if you can. Each row on the
       pages that follow is one reading: the book, the chapters, and where it sits in the story. Every reading
       is also one episode of the series on the channel, narrated word for word from the 1611 text, so you can
-      read it, listen to it, or both.
+      read it, listen to it, or both. Read from the King James Bible with the Apocrypha that came with this
+      plan: it is the same text the series narrates, and every book in it is bookmarked.
     </p>
     {opening_html}
     <div class="pagefoot">
@@ -214,6 +215,7 @@ def main():
     <ul class="cta-list">
       <li><span class="k">The series</span><p class="v">The Complete Biblical Timeline playlist, Season 1 to Season {len(data["seasons"])}<br/><span class="url">youtube.com/@AIBIBLEGOSPELS</span></p></li>
       <li><span class="k">Start with episode zero</span><p class="v">The Complete Story: why your Bible timeline is broken, and what this series does about it</p></li>
+      <li><span class="k">The text itself</span><p class="v">The King James Bible with the Apocrypha, the same text the series narrates (free PDF)<br/><span class="url">aibiblegospels.com/king-james-bible-with-apocrypha.pdf</span></p></li>
       <li><span class="k">The community</span><p class="v">Questions, discussion, and the daily drop<br/><span class="url">t.me/aibiblegospels</span></p></li>
       <li><span class="k">The rest of the work</span><p class="v">Faith Walk Live, Anointed, and everything else AI Bible Gospels is building<br/><span class="url">aibiblegospels.com</span></p></li>
     </ul>

@@ -62,7 +62,7 @@ export default function TimelineForm({ source = "timeline-page" }: { source?: st
           Check your inbox.
         </h3>
         <p className="text-brand-softgold mt-3 text-sm leading-relaxed">
-          The reading plan is on its way to{" "}
+          The reading plan and the King James Bible with the Apocrypha are on their way to{" "}
           <span className="text-brand-gold">{email}</span>. If you don&apos;t see
           it in a minute, peek in the promotions tab.
         </p>
@@ -76,12 +76,14 @@ export default function TimelineForm({ source = "timeline-page" }: { source?: st
         Free download
       </p>
       <h3 className="text-2xl font-semibold text-brand-cloud mt-2">
-        Get the reading plan.
+        Get the reading plan and the Bible.
       </h3>
       <p className="text-brand-softgold mt-3 text-sm leading-relaxed">
         All 81 books of the 1611 King James Bible, Apocrypha restored, in the
         order the events actually happened. Eighteen seasons, Creation to
-        Revelation, one reading per episode. PDF straight to your inbox.
+        Revelation, one reading per episode. Plus the full King James Bible
+        with the Apocrypha as a PDF, the same text the series narrates, so
+        you can read along together. Both straight to your inbox.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -105,7 +107,7 @@ export default function TimelineForm({ source = "timeline-page" }: { source?: st
           disabled={status === "submitting"}
           className="rounded-full bg-brand-gold text-brand-black font-semibold px-6 py-3 hover:bg-brand-amber transition disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {status === "submitting" ? "Sending…" : "Send me the plan"}
+          {status === "submitting" ? "Sending…" : "Send me both"}
         </button>
       </form>
 
@@ -116,7 +118,7 @@ export default function TimelineForm({ source = "timeline-page" }: { source?: st
       )}
 
       <p className="mt-4 text-xs text-brand-bronze">
-        One email with the PDF. No spam. Unsubscribe anytime.
+        One email with both PDFs. No spam. Unsubscribe anytime.
       </p>
     </div>
   );
