@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import localFont from "next/font/local";
 import StudyGuideForm from "@/components/StudyGuideForm";
+import HeroVideo from "@/components/HeroVideo";
 
 // Campaign display faces, scoped to this route so the rest of the site keeps
 // Geist. Both are SIL OFL and cleared for commercial merchandise — licences ship
@@ -86,8 +87,11 @@ const PRODUCTS = [
 export default function AnythingIsPossible() {
   return (
     <main className={`${anton.variable} ${oswald.variable} flex-1`}>
-      {/* ── HERO ── */}
-      <section className="max-w-4xl mx-auto px-4 pt-20 pb-16 text-center">
+      {/* ── HERO ── the same cycling video background as the home page and
+          /complete-biblical-timeline, under the dark gradient so the headline reads. */}
+      <section className="relative overflow-hidden border-b border-brand-border min-h-[640px] flex items-center">
+        <HeroVideo />
+        <div className="relative z-[2] max-w-4xl mx-auto px-4 pt-20 pb-16 text-center">
         <p className="text-xs uppercase tracking-[0.3em] text-brand-amber mb-6">
           AI Bible Gospels
         </p>
@@ -131,6 +135,7 @@ export default function AnythingIsPossible() {
           >
             Get the free study guide
           </a>
+        </div>
         </div>
       </section>
 
