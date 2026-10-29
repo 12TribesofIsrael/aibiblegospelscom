@@ -1,11 +1,15 @@
 import Link from "next/link";
 import SubscribeForm from "@/components/SubscribeForm";
+import HeroVideo from "@/components/HeroVideo";
 
 export default function Home() {
   return (
     <main className="flex-1">
-      {/* ── HERO ── */}
-      <section className="max-w-4xl mx-auto px-4 pt-20 pb-16 text-center">
+      {/* ── HERO ── the same cycling video background as anointed.app and
+          /complete-biblical-timeline, under the dark gradient so the headline reads. */}
+      <section className="relative overflow-hidden border-b border-brand-border min-h-[640px] flex items-center">
+        <HeroVideo />
+        <div className="relative z-[2] max-w-4xl mx-auto px-4 pt-20 pb-16 text-center">
         <p className="text-xs uppercase tracking-[0.3em] text-brand-amber mb-6">
           AI Bible Gospels
         </p>
@@ -31,6 +35,7 @@ export default function Home() {
           >
             Work with us
           </a>
+        </div>
         </div>
       </section>
 
